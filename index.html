@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Boring Illini — University of Illinois</title>
+  <meta name="description" content="The Boring Illini is a student engineering team at UIUC competing in The Boring Company's Not a Boring Competition, building a fully electric tunnel boring machine." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================ NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="assets/logos/BoringIlliniLogoWhite.png" alt="The Boring Illini" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#machine">The Machine</a></li>
+        <li><a href="#competition">Competition</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#join" class="nav-cta">Join Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#machine">The Machine</a>
+      <a href="#competition">Competition</a>
+      <a href="#team">Team</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#join">Join Us</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================ HERO -->
+  <section id="home" class="hero">
+    <div class="hero-photo-bg">
+      <div class="hero-slide active" style="background-image: url('assets/logos/B-real2.JPG')"></div>
+      <div class="hero-slide" style="background-image: url('assets/logos/B-real1.JPG')"></div>
+      <div class="hero-slide" style="background-image: url('assets/logos/B-real3.JPG')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <canvas id="tunnelCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">Grainger College of Engineering — University of Illinois Urbana-Champaign</div>
+      <h1 class="hero-title reveal">
+        <span class="title-line title-the">THE BORING</span>
+        <span class="title-line accent">ILLINI</span>
+      </h1>
+      <p class="hero-subtitle reveal">Fully electric. Student-built.<br />Competing on the world stage.</p>
+      <div class="hero-actions reveal">
+        <a href="#join" class="btn btn-primary">Join the Team</a>
+        <a href="#machine" class="btn btn-ghost">See the Machine</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat reveal">
+        <div class="stat-number" data-count="23">0</div>
+        <div class="stat-label">Active Members</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <div class="stat-number" data-count="21">0</div>
+        <div class="stat-label">kW Power Draw</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <div class="stat-number" data-count="815">0</div>
+        <div class="stat-label">kg Machine Mass</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat reveal">
+        <div class="stat-number" data-count="44">0</div>
+        <div class="stat-label">kN Thrust Force</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ ABOUT -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">WHO WE ARE</div>
+        <h2 class="section-title">Engineering the Future<br />of Underground Transit</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="lead">The Boring Illini is an interdisciplinary student engineering team at the University of Illinois Urbana-Champaign, building a fully electric Tunnel Boring Machine (TBM) from the ground up to compete on the world stage.</p>
+          <p>Founded in June 2025 and supported by the Grainger College of Engineering, our team brings together students from mechanical engineering, electrical engineering, computer science, and business — united by one goal: design, build, and operate a world-class TBM.</p>
+          <p>We compete in <strong>The Boring Company's Not a Boring Competition</strong>, a global contest challenging university teams to rethink how tunnels are built. Our machine design is driven by four core principles: <strong>Simplicity. Reliability. Modularity. Low-Cost.</strong></p>
+          <div class="about-values">
+            <div class="value-item">
+              <div class="value-icon">⚙</div>
+              <div>
+                <div class="value-title">Hands-On Engineering</div>
+                <div class="value-desc">Every subsystem — from cutterhead blades to power electronics — is designed, analyzed, and built by students</div>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">◈</div>
+              <div>
+                <div class="value-title">Interdisciplinary Team</div>
+                <div class="value-desc">Mechanical, electrical, software, and business students collaborate across every phase of development</div>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">◉</div>
+              <div>
+                <div class="value-title">Industry-Backed</div>
+                <div class="value-desc">Supported by sponsors including Caterpillar, Fastenal, Grainger, Sumitomo, Cadence, and more</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-photo-split reveal">
+          <img src="assets/logos/drilling-time.JPG" alt="The Boring Illini team at work" />
+          <div class="about-photo-split-overlay">
+            <div class="about-photo-credit">The Boring Illini — Bastrop, Texas</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Award + Photos ──────────────────────────────────────── -->
+      <div class="about-highlights reveal">
+
+        <!-- Photo pair -->
+        <div class="about-photos">
+          <div class="about-photo-wrap">
+            <img src="assets/logos/Mining-picture.jpeg" alt="Team in the field" />
+            <div class="photo-caption">Team in the Field</div>
+          </div>
+          <div class="about-photo-wrap roty-photo">
+            <img src="assets/logos/ROTY-picture.jpeg" alt="Rookie of the Year Award" />
+            <div class="photo-caption">Not a Boring Competition 2026</div>
+          </div>
+        </div>
+
+        <!-- ROTY + Elon row -->
+        <div class="about-award-row">
+
+          <!-- ROTY badge -->
+          <div class="roty-card">
+            <div class="roty-trophy">🏆</div>
+            <div class="roty-content">
+              <div class="roty-label">ROOKIE OF THE YEAR</div>
+              <div class="roty-event">Not a Boring Competition — 2026</div>
+              <div class="roty-desc">Awarded to the top first-year team out of all global university competitors.</div>
+            </div>
+          </div>
+
+          <!-- Elon repost callout -->
+          <a href="https://x.com/elonmusk/status/2041061597997924663" target="_blank" rel="noopener" class="elon-card">
+            <div class="elon-repost-tag">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5a4 4 0 0 1-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5a4 4 0 0 1 4 4v8.45l2.068-1.93 1.364 1.46L19.5 20.12l-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"/></svg>
+              Reposted by Elon
+            </div>
+            <div class="elon-header">
+              <div class="elon-avatar">
+                <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </div>
+              <div class="elon-info">
+                <div class="elon-name">Elon Musk</div>
+                <div class="elon-handle">@elonmusk</div>
+              </div>
+            </div>
+            <div class="elon-body">The Boring Illini wins <strong>Rookie of the Year</strong> at the Not a Boring Competition. Incredible work from a first-year UIUC team.</div>
+            <div class="elon-stats">
+              <span class="elon-views-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"/></svg>
+              </span>
+              <span class="elon-views">1.1M views</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ THE MACHINE -->
+  <section id="machine" class="section machine">
+    <div class="machine-bg-text">TBM</div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">THE MACHINE</div>
+        <h2 class="section-title">Built from Scratch.<br />Built to Last.</h2>
+        <p class="section-subtitle reveal">A fully electric TBM standing 3.022 m tall, weighing 814.9 kg, with 21.8 kW of onboard power — designed, manufactured, and assembled entirely by students.</p>
+      </div>
+
+      <div class="machine-hero-photo reveal">
+        <img src="assets/logos/B-real3.JPG" alt="The Boring Illini TBM" />
+        <div class="machine-hero-photo-overlay"></div>
+        <div class="machine-hero-label">THE MACHINE</div>
+        <div class="machine-hero-sublabel">Bastrop, TX — 2026</div>
+      </div>
+
+      <!-- Machine Specs Bar -->
+      <div class="machine-params reveal">
+        <div class="param">
+          <div class="param-val">37.4 kN</div>
+          <div class="param-key">Max Thrust</div>
+        </div>
+        <div class="param">
+          <div class="param-val">2.8 kNm</div>
+          <div class="param-key">Max Torque</div>
+        </div>
+        <div class="param">
+          <div class="param-val">5 RPM</div>
+          <div class="param-key">Cutter Speed</div>
+        </div>
+        <div class="param">
+          <div class="param-val">277 mm/min</div>
+          <div class="param-key">Max Advance Rate</div>
+        </div>
+        <div class="param">
+          <div class="param-val">3.022 m</div>
+          <div class="param-key">Machine Height</div>
+        </div>
+        <div class="param">
+          <div class="param-val">21.8 kW</div>
+          <div class="param-key">Max Power Draw</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ COMPETITION -->
+  <section id="competition" class="section competition">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">THE COMPETITION</div>
+        <h2 class="section-title">Not a Boring<br />Competition</h2>
+      </div>
+      <div class="competition-grid">
+        <div class="comp-intro reveal">
+          <p class="lead">Hosted by <strong>The Boring Company</strong> — Elon Musk's tunneling and infrastructure startup — the Not a Boring Competition challenges university teams worldwide to design and build the fastest, most efficient small-scale tunnel boring machines.</p>
+          <p>Teams must bore a tunnel of specified dimensions as quickly as possible, scoring on speed, alignment, and engineering elegance. It's the Formula 1 of underground engineering — and the Boring Illini are in it.</p>
+          <a href="https://www.boringcompany.com/not-a-boring-competition" target="_blank" rel="noopener" class="btn btn-primary">Competition Details →</a>
+        </div>
+        <div class="comp-timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker active"></div>
+            <div class="timeline-content">
+              <div class="timeline-label">Phase 1 — Summer - Winter</div>
+              <div class="timeline-title">Design &amp; Proposal</div>
+              <div class="timeline-desc">Technical proposal, machine architecture, and safety plan submitted to The Boring Company</div>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker active"></div>
+            <div class="timeline-content">
+              <div class="timeline-label">Phase 2 — Winter - Spring</div>
+              <div class="timeline-title">Manufacturing Season</div>
+              <div class="timeline-desc">Full machine fabrication across all subsystems — cutterhead, propulsion, muck removal, and electrical enclosures</div>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-label">Phase 3 — Spring </div>
+              <div class="timeline-title">Final Assembly &amp; Testing</div>
+              <div class="timeline-desc">Mining Readiness Review (MRR) complete. Final assembly, 480V system testing, and pre-competition validation</div>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-label">Phase 4 — Spring</div>
+              <div class="timeline-title">Competition Week</div>
+              <div class="timeline-desc">Head-to-head against top university teams worldwide at the Boring Company competition site</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comp-stats reveal">
+        <div class="comp-stat">
+          <div class="comp-stat-num">20+</div>
+          <div class="comp-stat-label">Universities Worldwide</div>
+        </div>
+        <div class="comp-stat">
+          <div class="comp-stat-num">40 min</div>
+          <div class="comp-stat-label">Fastest Target Dig Time</div>
+        </div>
+        <div class="comp-stat">
+          <div class="comp-stat-num">TBC</div>
+          <div class="comp-stat-label">Hosted by The Boring Company</div>
+        </div>
+        <div class="comp-stat">
+          <div class="comp-stat-num">Year 1</div>
+          <div class="comp-stat-label">First Season Competing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ SUBTEAMS -->
+  <section class="section subteams">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">OUR STRUCTURE</div>
+        <h2 class="section-title">Five Subteams.<br />One Machine.</h2>
+      </div>
+      <div class="subteams-grid">
+        <div class="subteam-card reveal" style="--delay:0s">
+          <div class="subteam-icon">◎</div>
+          <div class="subteam-name">Cutterhead</div>
+          <div class="subteam-desc">Blade design, structural FEA, gearbox integration, bearing assembly, and jig manufacturing. The face that does the cutting.</div>
+          <div class="subteam-lead">Lead: Milena Savić</div>
+        </div>
+        <div class="subteam-card reveal" style="--delay:.1s">
+          <div class="subteam-icon">⬆</div>
+          <div class="subteam-name">Propulsion</div>
+          <div class="subteam-desc">Structural chassis design, screw jack thrust system, FEA simulations, roller brackets, and anchored structure integration.</div>
+          <div class="subteam-lead">Lead: Vedant Thakar</div>
+        </div>
+        <div class="subteam-card reveal" style="--delay:.2s">
+          <div class="subteam-icon">◈</div>
+          <div class="subteam-name">Muck Removal</div>
+          <div class="subteam-desc">Auger conveyor design, soil mechanics, ACP soil conditioning system, material transport flow analysis and testing.</div>
+          <div class="subteam-lead">Lead: Alexander Xie</div>
+        </div>
+        <div class="subteam-card reveal" style="--delay:.3s">
+          <div class="subteam-icon">⚡</div>
+          <div class="subteam-name">Electronics</div>
+          <div class="subteam-desc">480V power distribution, VFD selection and configuration, E-stop logic, ground fault protection, electrical enclosures, RS-485/Modbus control network, Python GUI telemetry dashboard, and sensor integration.</div>
+          <div class="subteam-lead">Lead: Vihaansh Majithia</div>
+        </div>
+        <div class="subteam-card reveal" style="--delay:.5s">
+          <div class="subteam-icon">◐</div>
+          <div class="subteam-name">Sponsorship &amp; Marketing</div>
+          <div class="subteam-desc">Industry partnerships, fundraising, media, competition logistics, merchandise, and organizational outreach.</div>
+          <div class="subteam-lead">Lead: Tom Hong</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ TEAM -->
+  <section id="team" class="section team">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">THE PEOPLE</div>
+        <h2 class="section-title">Meet the Team</h2>
+        <p class="section-subtitle">23 active members. 14 competing. Student-led, faculty-advised, and entirely interdisciplinary.</p>
+      </div>
+
+      <div class="team-photo-banner reveal">
+        <img src="assets/logos/boring-company-teampic.jpg" alt="The Boring Illini Team" />
+        <div class="team-photo-banner-overlay">
+          <div class="team-photo-caption">23 Members. One Machine.</div>
+        </div>
+      </div>
+
+      <div class="team-leads-label reveal">Team Leads</div>
+      <div class="team-grid">
+        <a href="https://www.linkedin.com/in/vedant-thakar/" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:15">
+            <img src="assets/team/vedant-thakar.jpg" alt="Vedant Thakar" onerror="this.style.display='none'" />
+            <div class="avatar-initials">VT</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Vedant Thakar</div>
+            <div class="team-role">Chief Engineer · Propulsion Lead</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/milenasavic/" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:200">
+            <img src="assets/team/milenasavic.jpg" alt="Milena Savić" onerror="this.style.display='none'" />
+            <div class="avatar-initials">MS</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Milena Savić</div>
+            <div class="team-role">Chief Mfg Engineer · Cutterhead Lead</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/alexander-xie-mechanical-engineering/" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:140">
+            <img src="assets/team/alexander-xie.jpg" alt="Alexander Xie" onerror="this.style.display='none'" />
+            <div class="avatar-initials">AX</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Alexander Xie</div>
+            <div class="team-role">Drill Sergeant · Muck Removal Lead</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/vihaansh-majithia" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:260">
+            <img src="assets/team/vihaansh-majithia.jpg" alt="Vihaansh Majithia" onerror="this.style.display='none'" />
+            <div class="avatar-initials">VM</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Vihaansh Majithia</div>
+            <div class="team-role">Electronics Lead</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/jiashu-hong/" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:45">
+            <img src="assets/team/tom-hong.jpg" alt="Tom Hong" onerror="this.style.display='none'" />
+            <div class="avatar-initials">TH</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Tom Hong</div>
+            <div class="team-role">Sponsorship Lead</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/benjamin-loo/" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:180">
+            <img src="assets/team/benjamin-loo.jpg" alt="Benjamin Loo" onerror="this.style.display='none'" />
+            <div class="avatar-initials">BL</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Benjamin Loo</div>
+            <div class="team-role">Embedded Systems</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/vanyazhadovich" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:320">
+            <img src="assets/team/vanya-zhadovich.jpg" alt="Vanya Zhadovich" onerror="this.style.display='none'" />
+            <div class="avatar-initials">VZ</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Vanya Zhadovich</div>
+            <div class="team-role">Power Systems</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+        <div class="team-card team-card--join reveal">
+          <div class="join-plus">+</div>
+          <div class="team-info">
+            <div class="team-name">Think You Have What It Takes?</div>
+            <a href="#join" class="btn btn-sm btn-join-cta">Join Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-leads-label reveal" style="margin-top:56px">2027 Competition Team Leads</div>
+      <div class="team-grid">
+        <a href="https://www.linkedin.com/in/nathan-chan01/" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:30">
+            <img src="assets/team/nathan-chan.jpg" alt="Nathan Chan" onerror="this.style.display='none'" />
+            <div class="avatar-initials">NC</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Nathan Chan</div>
+            <div class="team-role">Mechanical Lead</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/tenkh/" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:200">
+            <img src="assets/team/temuujin-enkhbayar.jpg" alt="Temuujin Enkhbayar" onerror="this.style.display='none'" />
+            <div class="avatar-initials">TE</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Temuujin Enkhbayar</div>
+            <div class="team-role">Mechanical Lead</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/adamchen0127/" target="_blank" rel="noopener" class="team-card reveal team-card--linked">
+          <div class="team-avatar" style="--hue:120">
+            <img src="assets/team/adam-chen.jpg" alt="Adam Chen" onerror="this.style.display='none'" />
+            <div class="avatar-initials">AC</div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Adam Chen</div>
+            <div class="team-role">Mechanical Lead</div>
+          </div>
+          <div class="linkedin-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="team-leads-label reveal" style="margin-top:48px">Advisors</div>
+      <div class="advisors-grid">
+        <div class="advisor-card reveal">
+          <div class="advisor-name">Prof. Nenad Miljkovic</div>
+          <div class="advisor-role">Faculty Advisor</div>
+          <div class="advisor-dept">Mechanical Science &amp; Engineering, UIUC</div>
+        </div>
+        <div class="advisor-card reveal">
+          <div class="advisor-name">Dale Sormaz &amp; Jack Sormaz</div>
+          <div class="advisor-role">Mechanical Advisors</div>
+          <div class="advisor-dept">Industry Technical Support</div>
+        </div>
+      </div>
+
+      <div class="team-cta reveal">
+        <p>2026 Competition Team Members: Adam Chen · Tintin Yang · Adrian Huang · Temuujin Enkhbayar · Jash Doshi · Nathan Chan · Chloe Diner · Stephanie Kirova · Aria Gupta · Joakin Soederlind · Adam Weiner · Georg Bauer · Sophia Yousuf · Rachel Oh · Mason Le</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ SPONSORS -->
+  <section id="sponsors" class="section sponsors">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">PARTNERS &amp; SPONSORS</div>
+        <h2 class="section-title">Backed by the Best</h2>
+        <p class="section-subtitle reveal">Our sponsors make world-class student engineering possible. From raw materials to power systems, our partners provide the tools, funding, and expertise that drive us forward.</p>
+      </div>
+
+      <div class="sponsor-tiers">
+
+        <!-- Tier 1 -->
+        <div class="tier-section reveal">
+          <div class="tier-label tier-gold">TIER 1</div>
+          <div class="sponsor-row">
+            <div class="sponsor-logo-box large">
+              <img src="assets/logos/uiuc-mechse.png" alt="University of Illinois — Grainger College of Engineering" />
+            </div>
+            <div class="sponsor-logo-box large">
+              <img src="assets/logos/chicago-metal1.png" alt="Chicago Metal Rolled Products" />
+            </div>
+            <div class="sponsor-logo-box large">
+              <img src="assets/logos/sumitomo.png" alt="Sumitomo Drive Technologies" />
+            </div>
+            <div class="sponsor-logo-box large">
+              <img src="assets/logos/illinois-green-fund.png" alt="Illinois Green Fund" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="tier-section reveal">
+          <div class="tier-label tier-silver">TIER 2</div>
+          <div class="sponsor-row">
+            <div class="sponsor-logo-box medium">
+              <img src="assets/logos/bonnell.svg" alt="Bonnell Aluminum" />
+            </div>
+            <div class="sponsor-logo-box medium">
+              <img src="assets/logos/cadence.png" alt="Cadence" />
+            </div>
+            <div class="sponsor-logo-box medium">
+              <img src="assets/logos/edc.png" alt="Engineering Design Council" />
+            </div>
+            <div class="sponsor-logo-box medium">
+              <img src="assets/logos/akkerman.svg" alt="Akkerman" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="tier-section reveal">
+          <div class="tier-label tier-bronze">TIER 3</div>
+          <div class="sponsor-row" style="flex-wrap:wrap;">
+            <div class="sponsor-logo-box small">
+              <img src="assets/logos/ec.jpg" alt="Engineering Council @ Illinois" />
+            </div>
+            <div class="sponsor-logo-box small sponsor-placeholder">
+              <img src="assets/logos/sormaz.jpeg" alt="Sons of Sormas" />
+            </div>
+            <div class="sponsor-logo-box small">
+              <img src="assets/logos/illini-dads.png" alt="Illini Dads Association" />
+            </div>
+            <div class="sponsor-logo-box small">
+              <img src="assets/logos/fastenal.png" alt="Fastenal" />
+            </div>
+            <div class="sponsor-logo-box small">
+              <img src="assets/logos/grainger.png" alt="Grainger" />
+            </div>
+            <div class="sponsor-logo-box small">
+              <img src="assets/logos/cat.png" alt="Caterpillar" />
+            </div>
+            <div class="sponsor-logo-box small">
+              <img src="assets/logos/sendcutsend.svg" alt="SendCutSend" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sponsor-cta reveal">
+        <div class="sponsor-cta-card">
+          <div class="sponsor-cta-text">
+            <h3>Become a Sponsor</h3>
+            <p>Partner with the Boring Illini and gain direct access to UIUC's top engineering talent. Your support fuels a full-scale machine build and connects you to 23 high-achieving future engineers.</p>
+            <ul class="sponsor-perks">
+              <li>Logo on team apparel, machine, and website</li>
+              <li>Direct recruiting access to team members across 10+ disciplines</li>
+              <li>Recognition at competition and all public events</li>
+              <li>Social media and press features</li>
+              <li>Tax-deductible via UIUC Foundation</li>
+            </ul>
+          </div>
+          <div class="sponsor-cta-action">
+            <div class="sponsorship-tiers-preview">
+              <div class="tier-preview">
+                <div class="tier-preview-name">Title</div>
+                <div class="tier-preview-amount">$10,000+</div>
+              </div>
+              <div class="tier-preview">
+                <div class="tier-preview-name">Platinum</div>
+                <div class="tier-preview-amount">$5,000+</div>
+              </div>
+              <div class="tier-preview">
+                <div class="tier-preview-name">Gold</div>
+                <div class="tier-preview-amount">$2,500+</div>
+              </div>
+              <div class="tier-preview">
+                <div class="tier-preview-name">Silver</div>
+                <div class="tier-preview-amount">$1,000+</div>
+              </div>
+            </div>
+            <a href="mailto:boringillini@illinois.edu?subject=Sponsorship Inquiry — The Boring Illini" class="btn btn-primary btn-large">Request Sponsorship Packet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ JOIN -->
+  <section id="join" class="section join">
+    <div class="join-bg">
+      <div class="join-circles">
+        <div class="jc jc1"></div>
+        <div class="jc jc2"></div>
+        <div class="jc jc3"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="join-content">
+        <div class="join-text reveal">
+          <div class="section-label">JOIN THE TEAM</div>
+          <h2 class="section-title">Ready to Dig<br />Deeper?</h2>
+          <p class="lead">We recruit motivated students from every discipline. No prior TBM experience required — just the drive to build something real, work with industry professionals, and represent Illinois on the world stage.</p>
+          <p style="color:var(--text-muted);font-size:15px;margin-bottom:24px">Beyond the build, members gain access to industry visits, company info sessions with corporate sponsors, and leadership opportunities across all subteams.</p>
+          <div class="join-disciplines">
+            <span>Mechanical Eng.</span>
+            <span>Electrical Eng.</span>
+            <span>Computer Science</span>
+            <span>Civil Eng.</span>
+            <span>Systems Eng.</span>
+            <span>Business</span>
+            <span>Marketing</span>
+            <span>Any Major</span>
+          </div>
+          <div class="join-actions">
+            <a href="mailto:boringillini@illinois.edu?subject=Interest in Joining The Boring Illini" class="btn btn-primary btn-large">Get in Touch</a>
+          </div>
+        </div>
+        <div class="join-info reveal">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-title">Location</div>
+              <div class="info-desc">University of Illinois Urbana-Champaign<br />Grainger College of Engineering<br />Champaign, IL 61820</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📧</div>
+            <div>
+              <div class="info-title">Email Us</div>
+              <div class="info-desc"><a href="mailto:boringillini@illinois.edu">boringillini@illinois.edu</a></div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🏛</div>
+            <div>
+              <div class="info-title">Faculty Advisor</div>
+              <div class="info-desc">Prof. Nenad Miljkovic<br />Mechanical Science &amp; Engineering</div>
+            </div>
+          </div>
+          <div class="social-links-block">
+            <div class="info-title">Follow Our Journey</div>
+            <div class="social-links">
+              <a href="https://www.instagram.com/theboringillini/" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/the-boring-illini-uiuc/" target="_blank" rel="noopener" class="social-btn linkedin" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://x.com/TheBoringIllini" target="_blank" rel="noopener" class="social-btn twitter" aria-label="Twitter / X">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.635 5.903-5.635zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/logos/BoringIlliniLogoWhite.png" alt="The Boring Illini" class="nav-logo-img" />
+          </div>
+          <p>University of Illinois Urbana-Champaign<br />Grainger College of Engineering</p>
+          <p class="footer-affiliation">A Registered Student Organization · Founded June 2025</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="footer-col-title">Navigate</div>
+            <a href="#about">About</a>
+            <a href="#machine">The Machine</a>
+            <a href="#competition">Competition</a>
+            <a href="#team">Team</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#join">Join</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Connect</div>
+            <a href="https://www.instagram.com/theboringillini/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/company/the-boring-illini-uiuc/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/TheBoringIllini" target="_blank" rel="noopener">Twitter / X</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Contact</div>
+            <a href="mailto:boringillini@illinois.edu">boringillini@illinois.edu</a>
+            <a href="https://www.boringcompany.com/" target="_blank" rel="noopener">The Boring Company</a>
+            <a href="https://grainger.illinois.edu" target="_blank" rel="noopener">Grainger College of Engineering</a>
+            <a href="https://illinois.edu" target="_blank" rel="noopener">University of Illinois</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2025 The Boring Illini · University of Illinois Urbana-Champaign</div>
+        <div class="footer-made">Made with ⛏ in Champaign, IL</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
