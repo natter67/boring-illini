@@ -3,23 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Become a Sponsor — The Boring Illini</title>
+  <title>Partner With Us — The Boring Illini</title>
   <meta name="description" content="Partner with the Boring Illini and gain access to UIUC's top engineering talent. View sponsorship tiers and get in touch." />
 
-  <!-- Open Graph / Social sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://boringillini.com/sponsors.html" />
-  <meta property="og:title" content="Become a Sponsor — The Boring Illini" />
-  <meta property="og:description" content="Partner with UIUC's tunnel boring machine team. View sponsorship tiers from $500 to $10,000+ and connect with top engineering talent." />
-  <meta property="og:image" content="https://boringillini.com/assets/logos/B-real2.JPG" />
-
-  <!-- Twitter / X card -->
+  <meta property="og:url" content="https://www.boringillini.com/sponsors.html" />
+  <meta property="og:title" content="Partner With Us — The Boring Illini" />
+  <meta property="og:description" content="Partner with UIUC's tunnel boring machine team. Access top engineering talent, brand visibility, and recruiting pipeline." />
+  <meta property="og:image" content="https://www.boringillini.com/assets/logos/B-real2.JPG" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Become a Sponsor — The Boring Illini" />
-  <meta name="twitter:description" content="Partner with UIUC's tunnel boring machine team. View sponsorship tiers from $500 to $10,000+." />
-  <meta name="twitter:image" content="https://boringillini.com/assets/logos/B-real2.JPG" />
-
-  <!-- Favicon -->
+  <meta name="twitter:title" content="Partner With Us — The Boring Illini" />
+  <meta name="twitter:description" content="Partner with UIUC's tunnel boring machine team. Access top engineering talent and brand visibility." />
+  <meta name="twitter:image" content="https://www.boringillini.com/assets/logos/B-real2.JPG" />
   <link rel="icon" type="image/png" href="assets/logos/BoringIlliniLogo.png" />
   <link rel="apple-touch-icon" href="assets/logos/BoringIlliniLogo.png" />
 
@@ -27,266 +22,508 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    /* ── Sponsor page specific styles ─────────────────────── */
+    /* ── Hero ───────────────────────────────────────────────── */
     .sp-hero {
-      padding: 120px 0 80px;
-      text-align: center;
-      background: var(--bg);
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .sp-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/logos/B-real3.JPG');
+      background-size: cover;
+      background-position: center 35%;
+      z-index: 0;
+    }
+    .sp-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(8,8,8,0.92) 45%, rgba(8,8,8,0.55) 100%);
+      z-index: 1;
+    }
+    .sp-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 140px 32px 80px;
+      margin: 0 auto 0 calc((100vw - 1200px) / 2);
+    }
+    @media (max-width: 1264px) { .sp-hero-content { margin-left: 32px; } }
+    .sp-hero-eyebrow {
+      font-family: var(--font-head);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 24px;
     }
     .sp-hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(48px, 7vw, 88px);
-      line-height: 1;
+      font-size: clamp(56px, 8vw, 104px);
+      line-height: 0.95;
       color: var(--text);
-      margin-bottom: 20px;
+      margin-bottom: 32px;
     }
-    .sp-hero p {
-      color: var(--text-muted);
-      font-size: 17px;
-      max-width: 560px;
-      margin: 0 auto;
+    .sp-hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+    .sp-hero-sub {
+      font-size: 18px;
+      color: rgba(245,245,245,0.75);
       line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 40px;
     }
+    .sp-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
-    /* ── Benefits tabs ─────────────────────────────────────── */
-    .sp-benefits {
-      background: var(--bg-1);
-      padding: 0 0 80px;
-    }
-    .sp-tabs {
-      display: flex;
-      gap: 0;
+    /* ── Proof bar ──────────────────────────────────────────── */
+    .sp-proof-bar {
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      padding: 0;
     }
-    .sp-tab {
-      flex-shrink: 0;
-      padding: 18px 28px;
+    .sp-proof-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .sp-proof-item {
+      padding: 32px 24px;
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+    .sp-proof-item:last-child { border-right: none; }
+    .sp-proof-num {
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .sp-proof-label {
       font-family: var(--font-head);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--text-muted);
-      cursor: pointer;
-      border: none;
-      background: none;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -1px;
-      transition: color 0.2s, border-color 0.2s;
-      white-space: nowrap;
     }
-    .sp-tab:hover { color: var(--text); }
-    .sp-tab.active { color: var(--orange); border-bottom-color: var(--orange); }
 
-    .sp-panel { display: none; }
-    .sp-panel.active { display: block; }
-
-    .sp-panel-inner {
+    /* ── Why section ────────────────────────────────────────── */
+    .sp-why {
+      padding: 100px 0;
+      background: var(--bg);
+    }
+    .sp-why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-top: 64px;
+    }
+    .sp-why-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 4vw, 60px);
+      line-height: 1;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .sp-why-text p {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .sp-why-photo {
       position: relative;
-      width: 100%;
-      aspect-ratio: 16/7;
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      min-height: 320px;
+      aspect-ratio: 4/3;
     }
-    .sp-panel-inner img {
+    .sp-why-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 40%;
+      object-position: center 30%;
+    }
+    .sp-why-photo-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(8,8,8,0.85);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      backdrop-filter: blur(8px);
+    }
+    .sp-why-photo-badge-title {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--orange);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .sp-why-photo-badge-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ── Talent section ─────────────────────────────────────── */
+    .sp-talent {
+      padding: 100px 0;
+      background: var(--bg-1);
+    }
+    .sp-talent-header { text-align: center; margin-bottom: 16px; }
+    .sp-talent-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 16px;
+      max-width: 520px;
+      margin: 0 auto 56px;
+      line-height: 1.7;
+    }
+    .sp-talent-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 56px;
+    }
+    .sp-talent-logo-pill {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 10px 20px;
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--text);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .sp-talent-logo-pill:hover { border-color: var(--orange); color: var(--orange); }
+    .sp-talent-cta {
+      text-align: center;
+      padding: 40px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .sp-talent-cta h3 {
+      font-family: var(--font-display);
+      font-size: 36px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .sp-talent-cta p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* ── Benefits ───────────────────────────────────────────── */
+    .sp-benefits {
+      padding: 100px 0;
+      background: var(--bg);
+    }
+    .sp-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .sp-benefit-card {
+      background: var(--bg-1);
+      padding: 40px 32px;
+      transition: background 0.2s;
+    }
+    .sp-benefit-card:hover { background: var(--bg-2); }
+    .sp-benefit-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(232,74,39,0.1);
+      border: 1px solid rgba(232,74,39,0.25);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .sp-benefit-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+    .sp-benefit-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .sp-benefit-tier {
+      margin-top: 20px;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    /* ── Social proof ───────────────────────────────────────── */
+    .sp-social-proof {
+      padding: 100px 0;
+      background: var(--bg-1);
+    }
+    .sp-proof-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .sp-proof-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .sp-proof-card-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      object-position: center 30%;
       display: block;
     }
-    .sp-panel-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(8,8,8,0.92) 0%, rgba(8,8,8,0.3) 50%, rgba(8,8,8,0.1) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 48px 56px;
+    .sp-proof-card-body {
+      padding: 28px 32px;
     }
-    .sp-panel-title {
+    .sp-proof-card-tag {
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+    .sp-proof-card-title {
       font-family: var(--font-display);
-      font-size: clamp(36px, 5vw, 64px);
+      font-size: 28px;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .sp-proof-card-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── Tiers ──────────────────────────────────────────────── */
+    .sp-tiers {
+      padding: 100px 0;
+      background: var(--bg);
+    }
+    .sp-tiers-intro {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .sp-tiers-intro h2 {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5vw, 72px);
       color: var(--text);
       line-height: 1;
       margin-bottom: 16px;
     }
-    .sp-panel-desc {
-      color: rgba(245,245,245,0.75);
-      font-size: 15px;
-      line-height: 1.7;
-      max-width: 560px;
-    }
-
-    /* ── Tier table ────────────────────────────────────────── */
-    .sp-tiers {
-      background: var(--bg);
-      padding: 80px 0;
-    }
-    .sp-tiers-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    .sp-tiers-header h2 {
-      font-family: var(--font-display);
-      font-size: clamp(40px, 5vw, 64px);
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-    .sp-tiers-header p {
+    .sp-tiers-intro p {
       color: var(--text-muted);
       font-size: 16px;
-      max-width: 520px;
+      max-width: 480px;
       margin: 0 auto;
+      line-height: 1.7;
     }
-    .tier-table-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+    .sp-tier-cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
     }
-    .tier-table {
-      width: 100%;
-      min-width: 720px;
-      border-collapse: collapse;
-      font-size: 14px;
+    .sp-tier-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      transition: var(--transition);
+      position: relative;
     }
-    .tier-table th {
-      padding: 20px 16px;
-      text-align: center;
+    .sp-tier-card:hover { border-color: var(--border-hi); transform: translateY(-4px); }
+    .sp-tier-card.featured {
+      border-color: var(--orange);
+      background: rgba(232,74,39,0.05);
+    }
+    .sp-tier-card.featured:hover { box-shadow: 0 12px 40px rgba(232,74,39,0.15); }
+    .sp-tier-featured-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: #fff;
       font-family: var(--font-head);
+      font-size: 10px;
       font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      border-bottom: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 100px;
+      white-space: nowrap;
     }
-    .tier-table th.col-benefit {
-      text-align: left;
-      color: var(--text-muted);
-    }
-    .tier-table th.col-bronze { color: #cd7f32; }
-    .tier-table th.col-silver { color: #a8a9ad; }
-    .tier-table th.col-gold   { color: #d4af37; }
-    .tier-table th.col-plat   { color: #b5c5d4; }
-    .tier-table th.col-partner { color: var(--orange); background: rgba(232,74,39,0.07); border-radius: 4px 4px 0 0; }
-
-    .tier-price {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 20px;
-      margin-top: 4px;
-      font-weight: 400;
-      letter-spacing: 0;
-    }
-    .tier-table td {
-      padding: 14px 16px;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-      color: var(--text-muted);
-      transition: background 0.15s;
-    }
-    .tier-table td.col-benefit {
-      text-align: left;
-      color: var(--text);
-      font-size: 14px;
-    }
-    .tier-table td.col-partner {
-      background: rgba(232,74,39,0.04);
-    }
-    .tier-table tr:hover td { background: rgba(255,255,255,0.02); }
-    .tier-table tr:hover td.col-partner { background: rgba(232,74,39,0.07); }
-    .tier-check { color: var(--orange); font-size: 16px; }
-    .tier-size {
+    .sp-tier-name {
       font-family: var(--font-head);
-      font-weight: 700;
       font-size: 13px;
-      letter-spacing: 1px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .sp-tier-price {
+      font-family: var(--font-display);
+      font-size: 32px;
       color: var(--text);
+      line-height: 1;
+      margin-bottom: 20px;
     }
-    .tier-dash { color: var(--border-hi); }
+    .sp-tier-price span { font-size: 16px; color: var(--text-muted); }
+    .sp-tier-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 20px; }
+    .sp-tier-perks { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .sp-tier-perks li {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      line-height: 1.4;
+    }
+    .sp-tier-perks li .ck { color: var(--orange); flex-shrink: 0; font-size: 12px; margin-top: 1px; }
+    .sp-tier-perks li .na { color: var(--text-dim); flex-shrink: 0; font-size: 12px; margin-top: 1px; }
+    .sp-tier-card.featured .sp-tier-perks li { color: var(--text); }
 
-    /* ── Contribution types ────────────────────────────────── */
-    .sp-contrib {
-      background: var(--bg-1);
-      padding: 72px 0;
-    }
-    .sp-contrib-grid {
+    /* Contribution types */
+    .sp-contrib-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 16px;
       margin-top: 48px;
     }
     .sp-contrib-card {
       background: var(--bg-2);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 32px 28px;
-      transition: var(--transition);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: border-color 0.2s;
     }
-    .sp-contrib-card:hover { border-color: var(--orange); }
-    .sp-contrib-icon {
-      font-size: 28px;
-      margin-bottom: 16px;
+    .sp-contrib-card:hover { border-color: var(--border-hi); }
+    .sp-contrib-icon { font-size: 24px; margin-bottom: 12px; }
+    .sp-contrib-title { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .sp-contrib-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── Form ───────────────────────────────────────────────── */
+    .sp-form-section {
+      padding: 100px 0;
+      background: var(--bg-1);
+      position: relative;
+      overflow: hidden;
     }
-    .sp-contrib-title {
-      font-family: var(--font-head);
-      font-size: 18px;
-      font-weight: 700;
+    .sp-form-section::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(232,74,39,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .sp-form-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+    .sp-form-left h2 {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 4vw, 64px);
       color: var(--text);
-      margin-bottom: 8px;
+      line-height: 1;
+      margin-bottom: 20px;
     }
-    .sp-contrib-desc {
+    .sp-form-left p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .sp-form-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
       font-size: 14px;
       color: var(--text-muted);
-      line-height: 1.7;
     }
-
-    /* ── Become a Sponsor form ─────────────────────────────── */
-    .sp-form-section {
-      background: var(--bg);
-      padding: 80px 0;
-    }
-    .sp-form-wrap {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-    .sp-form-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-    .sp-form-header h2 {
-      font-family: var(--font-display);
-      font-size: clamp(40px, 5vw, 64px);
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-    .sp-form-header p {
-      color: var(--text-muted);
+    .sp-form-contact-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 16px;
+      flex-shrink: 0;
     }
-    .sp-form {
+    .sp-form-contact-item a { color: var(--text); }
+    .sp-form-contact-item a:hover { color: var(--orange); }
+    .sp-form-right {
       background: var(--bg-2);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 48px;
-    }
-    .sp-form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 24px;
+      padding: 40px;
     }
     .sp-form-group {
       display: flex;
       flex-direction: column;
       gap: 8px;
+      margin-bottom: 20px;
     }
-    .sp-form-group.full { grid-column: 1 / -1; }
     .sp-form-group label {
       font-family: var(--font-head);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -299,7 +536,7 @@
       background: var(--bg-3);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 14px 16px;
+      padding: 13px 16px;
       font-family: var(--font-body);
       font-size: 14px;
       color: var(--text);
@@ -320,34 +557,49 @@
       cursor: pointer;
     }
     .sp-form-group select option { background: var(--bg-3); }
-    .sp-form-group textarea { resize: vertical; min-height: 120px; }
+    .sp-form-group textarea { resize: vertical; min-height: 100px; }
+    .sp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .sp-form-submit {
       width: 100%;
-      padding: 16px;
-      font-size: 16px;
-      border-radius: 100px;
-      margin-top: 8px;
+      padding: 15px;
+      font-size: 15px;
+      border-radius: var(--radius);
+      margin-top: 4px;
     }
     .sp-form-note {
       text-align: center;
-      margin-top: 16px;
-      font-size: 13px;
+      margin-top: 14px;
+      font-size: 12px;
       color: var(--text-muted);
     }
     .sp-form-note a { color: var(--orange); }
 
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .sp-tier-cards { grid-template-columns: repeat(3, 1fr); }
+      .sp-tier-card:nth-child(4),
+      .sp-tier-card:nth-child(5) { grid-column: span 1; }
+    }
     @media (max-width: 768px) {
-      .sp-form-grid { grid-template-columns: 1fr; }
-      .sp-form { padding: 32px 24px; }
-      .sp-panel-overlay { padding: 32px 24px; }
-      .sp-contrib-grid { grid-template-columns: 1fr; }
-      .sp-tab { padding: 14px 18px; font-size: 12px; }
+      .sp-hero-content { padding: 120px 24px 60px; }
+      .sp-proof-inner { grid-template-columns: repeat(2, 1fr); }
+      .sp-why-grid { grid-template-columns: 1fr; gap: 40px; }
+      .sp-benefits-grid { grid-template-columns: 1fr; }
+      .sp-proof-cards { grid-template-columns: 1fr; }
+      .sp-tier-cards { grid-template-columns: 1fr 1fr; }
+      .sp-form-inner { grid-template-columns: 1fr; gap: 40px; }
+      .sp-form-row { grid-template-columns: 1fr; }
+      .sp-contrib-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .sp-tier-cards { grid-template-columns: 1fr; }
+      .sp-proof-inner { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ============================================================ NAVIGATION -->
+  <!-- NAV -->
   <nav id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
@@ -375,231 +627,362 @@
     </div>
   </nav>
 
-  <!-- ============================================================ HERO -->
-  <div class="sp-hero">
-    <div class="container">
-      <div class="section-label" style="margin-bottom:16px">PARTNERSHIP OPPORTUNITIES</div>
-      <h1>Interested in<br />Sponsoring Us?</h1>
-      <p>Partnering with the Boring Illini is a symbiotic investment — your support fuels world-class student engineering while connecting your brand to UIUC's top talent.</p>
+  <!-- ═══════════════════════════════════════════════ HERO -->
+  <section class="sp-hero">
+    <div class="sp-hero-bg"></div>
+    <div class="sp-hero-overlay"></div>
+    <div class="sp-hero-content">
+      <div class="sp-hero-eyebrow reveal">Partnership Opportunities — The Boring Illini</div>
+      <h1 class="reveal">23 Engineers.<br />One Machine.<br /><em>Your Logo On It.</em></h1>
+      <p class="sp-hero-sub reveal">The Boring Illini is UIUC's premier tunnel boring machine team — Rookie of the Year at the Not a Boring Competition. Partner with us and put your brand in front of the world's best young engineers.</p>
+      <div class="sp-hero-actions reveal">
+        <a href="#inquiry" class="btn btn-primary">Become a Partner</a>
+        <a href="#tiers" class="btn btn-ghost">View Tiers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ PROOF BAR -->
+  <div class="sp-proof-bar">
+    <div class="sp-proof-inner">
+      <div class="sp-proof-item">
+        <div class="sp-proof-num">1.1M</div>
+        <div class="sp-proof-label">Views — Elon Repost</div>
+      </div>
+      <div class="sp-proof-item">
+        <div class="sp-proof-num">#1</div>
+        <div class="sp-proof-label">Rookie of the Year 2026</div>
+      </div>
+      <div class="sp-proof-item">
+        <div class="sp-proof-num">23</div>
+        <div class="sp-proof-label">High-Caliber Engineers</div>
+      </div>
+      <div class="sp-proof-item">
+        <div class="sp-proof-num">Top 5</div>
+        <div class="sp-proof-label">US Engineering School</div>
+      </div>
     </div>
   </div>
 
-  <!-- ============================================================ BENEFITS TABS -->
+  <!-- ═══════════════════════════════════════════════ WHY US -->
+  <section class="sp-why">
+    <div class="container">
+      <div class="sp-why-grid">
+        <div class="sp-why-text reveal">
+          <div class="section-label">Why Partner With Us</div>
+          <h2>More Than a Logo Placement.</h2>
+          <p>We competed in our first-ever Not a Boring Competition in 2026 — and won Rookie of the Year against teams from around the world. Our machine was designed, built, and operated entirely by students from the Grainger College of Engineering at the University of Illinois Urbana-Champaign.</p>
+          <p>Sponsoring the Boring Illini puts your brand at the intersection of frontier technology, world-class talent, and an unprecedented level of media attention for a student engineering team.</p>
+          <p>Elon Musk's repost of our competition win reached <strong>1.1 million views</strong>. Your logo was on that machine.</p>
+          <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
+            <div style="background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;flex:1;min-width:140px;">
+              <div style="font-family:var(--font-display);font-size:28px;color:var(--orange);line-height:1">501(c)(3)</div>
+              <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Tax-deductible donations</div>
+            </div>
+            <div style="background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;flex:1;min-width:140px;">
+              <div style="font-family:var(--font-display);font-size:28px;color:var(--orange);line-height:1">2027</div>
+              <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Next competition cycle open</div>
+            </div>
+          </div>
+        </div>
+        <div class="sp-why-photo reveal">
+          <img src="assets/logos/ROTY-picture.jpeg" alt="Boring Illini Rookie of the Year" />
+          <div class="sp-why-photo-badge">
+            <div class="sp-why-photo-badge-title">🏆 Rookie of the Year</div>
+            <div class="sp-why-photo-badge-sub">Not a Boring Competition — 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ TALENT -->
+  <section class="sp-talent">
+    <div class="container">
+      <div class="sp-talent-header reveal">
+        <div class="section-label">Talent Pipeline</div>
+        <h2 class="section-title">Your Next Hire<br />Is On This Team.</h2>
+      </div>
+      <p class="sp-talent-sub reveal">Our members have interned and worked at some of the most prestigious engineering companies in the world. Silver sponsors and above gain direct access to our resume book.</p>
+      <div class="sp-talent-logos reveal">
+        <div class="sp-talent-logo-pill">Tesla</div>
+        <div class="sp-talent-logo-pill">AMD</div>
+        <div class="sp-talent-logo-pill">Rocket Lab</div>
+        <div class="sp-talent-logo-pill">Kohler</div>
+        <div class="sp-talent-logo-pill">Zebra Technologies</div>
+        <div class="sp-talent-logo-pill">Renesas</div>
+        <div class="sp-talent-logo-pill">P&G</div>
+        <div class="sp-talent-logo-pill">Tenneco</div>
+        <div class="sp-talent-logo-pill">Sormaz</div>
+      </div>
+      <div class="sp-talent-cta reveal">
+        <h3>Access Our Talent.</h3>
+        <p>Our team spans mechanical engineering, electrical engineering, computer science, and business. Every member is vetted, high-achieving, and actively looking for opportunities with forward-thinking companies.</p>
+        <a href="#inquiry" class="btn btn-primary">Request Resume Book Access</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ BENEFITS -->
   <section class="sp-benefits">
-    <div class="sp-tabs" id="spTabs">
-      <button class="sp-tab active" data-panel="0">Brand Visibility</button>
-      <button class="sp-tab" data-panel="1">Resume Book Access</button>
-      <button class="sp-tab" data-panel="2">Networking Events</button>
-      <button class="sp-tab" data-panel="3">Social Media Promotion</button>
-    </div>
-
-    <div class="sp-panel active" id="panel-0">
-      <div class="sp-panel-inner">
-        <img src="assets/logos/wireframeboringmachine-2026.png" alt="TBM Machine" style="object-fit:contain;background:#080808;padding:40px;" />
-        <div class="sp-panel-overlay">
-          <div class="sp-panel-title">Go on full display.</div>
-          <div class="sp-panel-desc">Your logo placed directly on our machine, team apparel, and website — seen by thousands at the Not a Boring Competition and across our digital channels. Silver sponsors and above receive hardware placement, scaled by tier.</div>
-        </div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">What You Get</div>
+        <h2 class="section-title">Built to Deliver ROI.</h2>
       </div>
-    </div>
-
-    <div class="sp-panel" id="panel-1">
-      <div class="sp-panel-inner">
-        <img src="assets/logos/boring-company-teampic.jpg" alt="The Boring Illini Team" />
-        <div class="sp-panel-overlay">
-          <div class="sp-panel-title">Access our elite talent.</div>
-          <div class="sp-panel-desc">Silver sponsors and above gain access to our team resume book. Our members have interned at Tesla, AMD, Rocket Lab, Kohler, Zebra Technologies, and more — and they're looking for their next opportunity.</div>
+      <div class="sp-benefits-grid">
+        <div class="sp-benefit-card reveal">
+          <div class="sp-benefit-icon">◎</div>
+          <div class="sp-benefit-title">Brand at Competition</div>
+          <div class="sp-benefit-desc">Your logo on the machine, team apparel, and pit setup — seen by judges, media, and competing teams from top universities worldwide at the Not a Boring Competition.</div>
+          <div class="sp-benefit-tier">Silver tier & above</div>
         </div>
-      </div>
-    </div>
-
-    <div class="sp-panel" id="panel-2">
-      <div class="sp-panel-inner">
-        <img src="assets/logos/B-real1.JPG" alt="Team at Competition" />
-        <div class="sp-panel-overlay">
-          <div class="sp-panel-title">Reach the future.</div>
-          <div class="sp-panel-desc">Gold sponsors and above can host company presentations, on-site lab visits, and networking sessions directly with our 23-member team. Connect your engineers with the next generation of industry talent.</div>
+        <div class="sp-benefit-card reveal" style="--delay:0.1s">
+          <div class="sp-benefit-icon">◈</div>
+          <div class="sp-benefit-title">Recruiting Pipeline</div>
+          <div class="sp-benefit-desc">Direct access to our team's resume book — 23 high-caliber students from UIUC Grainger College of Engineering, one of the top engineering schools in the country.</div>
+          <div class="sp-benefit-tier">Silver tier & above</div>
         </div>
-      </div>
-    </div>
-
-    <div class="sp-panel" id="panel-3">
-      <div class="sp-panel-inner">
-        <img src="assets/logos/ROTY-picture.jpeg" alt="Rookie of the Year" />
-        <div class="sp-panel-overlay">
-          <div class="sp-panel-title">Showcase your products.</div>
-          <div class="sp-panel-desc">All sponsors receive a social media shoutout across our platforms. Partner-level sponsors receive dedicated posts showcasing how your products contributed to our competition results — including reach to Elon Musk's 1.1M-view repost of our ROTY win.</div>
+        <div class="sp-benefit-card reveal" style="--delay:0.2s">
+          <div class="sp-benefit-icon">⚡</div>
+          <div class="sp-benefit-title">Digital Reach</div>
+          <div class="sp-benefit-desc">Logo on our website, social media shoutout across Instagram, LinkedIn, and X — the same channels that reached 1.1M views when Elon Musk reposted our ROTY win.</div>
+          <div class="sp-benefit-tier">All tiers</div>
+        </div>
+        <div class="sp-benefit-card reveal" style="--delay:0.1s">
+          <div class="sp-benefit-icon">◉</div>
+          <div class="sp-benefit-title">Networking Events</div>
+          <div class="sp-benefit-desc">Host a company presentation, lab tour, or info session directly with our team. Connect your engineers with the next generation of talent before they hit the job market.</div>
+          <div class="sp-benefit-tier">Gold tier & above</div>
+        </div>
+        <div class="sp-benefit-card reveal" style="--delay:0.2s">
+          <div class="sp-benefit-icon">▣</div>
+          <div class="sp-benefit-title">On-Site Access</div>
+          <div class="sp-benefit-desc">Attend our machine demonstrations, watch full-scale testing, and see your sponsored engineering in action — up close, before competition day.</div>
+          <div class="sp-benefit-tier">Platinum tier & above</div>
+        </div>
+        <div class="sp-benefit-card reveal" style="--delay:0.3s">
+          <div class="sp-benefit-icon">★</div>
+          <div class="sp-benefit-title">Tax Deductible</div>
+          <div class="sp-benefit-desc">As a registered 501(c)(3) nonprofit, all monetary contributions to the Boring Illini qualify as tax-deductible charitable donations under US law.</div>
+          <div class="sp-benefit-tier">All tiers</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================ TIERS -->
-  <section class="sp-tiers">
+  <!-- ═══════════════════════════════════════════════ SOCIAL PROOF -->
+  <section class="sp-social-proof">
     <div class="container">
-      <div class="sp-tiers-header reveal">
-        <div class="section-label">SPONSORSHIP TIERS</div>
-        <h2>Find Your Level</h2>
-        <p>All monetary contributions are tax-deductible. In-kind contributions and design reviews are also accepted.</p>
+      <div class="section-header reveal">
+        <div class="section-label">Recognition</div>
+        <h2 class="section-title">The World is Watching.</h2>
       </div>
-      <div class="tier-table-wrap reveal">
-        <table class="tier-table">
-          <thead>
-            <tr>
-              <th class="col-benefit">Benefits</th>
-              <th class="col-bronze">Bronze<span class="tier-price">$500+</span></th>
-              <th class="col-silver">Silver<span class="tier-price">$1,000+</span></th>
-              <th class="col-gold">Gold<span class="tier-price">$2,000+</span></th>
-              <th class="col-plat">Platinum<span class="tier-price">$6,000+</span></th>
-              <th class="col-partner">Partner<span class="tier-price">$10,000+</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-benefit">Tax-Deductible Contribution</td>
-              <td class="col-bronze"><span class="tier-check">✓</span></td>
-              <td class="col-silver"><span class="tier-check">✓</span></td>
-              <td class="col-gold"><span class="tier-check">✓</span></td>
-              <td class="col-plat"><span class="tier-check">✓</span></td>
-              <td class="col-partner"><span class="tier-check">✓</span></td>
-            </tr>
-            <tr>
-              <td class="col-benefit">Logo on Website</td>
-              <td class="col-bronze"><span class="tier-check">✓</span></td>
-              <td class="col-silver"><span class="tier-check">✓</span></td>
-              <td class="col-gold"><span class="tier-check">✓</span></td>
-              <td class="col-plat"><span class="tier-check">✓</span></td>
-              <td class="col-partner"><span class="tier-check">✓</span></td>
-            </tr>
-            <tr>
-              <td class="col-benefit">Social Media Shoutout</td>
-              <td class="col-bronze"><span class="tier-check">✓</span></td>
-              <td class="col-silver"><span class="tier-check">✓</span></td>
-              <td class="col-gold"><span class="tier-check">✓</span></td>
-              <td class="col-plat"><span class="tier-check">✓</span></td>
-              <td class="col-partner"><span class="tier-check">✓</span></td>
-            </tr>
-            <tr>
-              <td class="col-benefit">Logo on Hardware</td>
-              <td class="col-bronze"><span class="tier-dash">—</span></td>
-              <td class="col-silver"><span class="tier-size">S</span></td>
-              <td class="col-gold"><span class="tier-size">M</span></td>
-              <td class="col-plat"><span class="tier-size">L</span></td>
-              <td class="col-partner"><span class="tier-size">L</span></td>
-            </tr>
-            <tr>
-              <td class="col-benefit">Access to Resume Book</td>
-              <td class="col-bronze"><span class="tier-dash">—</span></td>
-              <td class="col-silver"><span class="tier-check">✓</span></td>
-              <td class="col-gold"><span class="tier-check">✓</span></td>
-              <td class="col-plat"><span class="tier-check">✓</span></td>
-              <td class="col-partner"><span class="tier-check">✓</span></td>
-            </tr>
-            <tr>
-              <td class="col-benefit">Access to Networking Events</td>
-              <td class="col-bronze"><span class="tier-dash">—</span></td>
-              <td class="col-silver"><span class="tier-dash">—</span></td>
-              <td class="col-gold"><span class="tier-check">✓</span></td>
-              <td class="col-plat"><span class="tier-check">✓</span></td>
-              <td class="col-partner"><span class="tier-check">✓</span></td>
-            </tr>
-            <tr>
-              <td class="col-benefit">On-Site Demonstrations</td>
-              <td class="col-bronze"><span class="tier-dash">—</span></td>
-              <td class="col-silver"><span class="tier-dash">—</span></td>
-              <td class="col-gold"><span class="tier-dash">—</span></td>
-              <td class="col-plat"><span class="tier-check">✓</span></td>
-              <td class="col-partner"><span class="tier-check">✓</span></td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="sp-proof-cards">
+        <div class="sp-proof-card reveal">
+          <img class="sp-proof-card-img" src="assets/logos/Mining-picture.jpeg" alt="Team in the field" />
+          <div class="sp-proof-card-body">
+            <div class="sp-proof-card-tag">Not a Boring Competition — 2026</div>
+            <div class="sp-proof-card-title">Rookie of the Year</div>
+            <div class="sp-proof-card-desc">Awarded to the top first-year team out of all global university competitors — in our very first season. The Boring Illini went from founding to champion in under 12 months.</div>
+          </div>
+        </div>
+        <div class="sp-proof-card reveal" style="--delay:0.1s">
+          <img class="sp-proof-card-img" src="assets/logos/B-real1.JPG" alt="Boring Illini at competition" />
+          <div class="sp-proof-card-body">
+            <div class="sp-proof-card-tag">Elon Musk — @elonmusk</div>
+            <div class="sp-proof-card-title">1.1 Million Views</div>
+            <div class="sp-proof-card-desc">Elon Musk reposted our Rookie of the Year win to his 200M+ followers. The post reached 1.1 million views — putting the Boring Illini, our machine, and our sponsors in front of the world.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================ CONTRIBUTION TYPES -->
-  <section class="sp-contrib">
+  <!-- ═══════════════════════════════════════════════ TIERS -->
+  <section class="sp-tiers" id="tiers">
     <div class="container">
-      <div class="section-header reveal" style="text-align:left;margin-bottom:0">
-        <div class="section-label">HOW TO CONTRIBUTE</div>
-        <h2 class="section-title">Ways to Partner</h2>
+      <div class="sp-tiers-intro reveal">
+        <div class="section-label">Sponsorship Tiers</div>
+        <h2>Find Your Level.</h2>
+        <p>Every contribution makes a difference. Choose the tier that fits your goals — or reach out to discuss a custom partnership.</p>
       </div>
-      <div class="sp-contrib-grid">
-        <div class="sp-contrib-card reveal">
+
+      <div class="sp-tier-cards">
+        <!-- Bronze -->
+        <div class="sp-tier-card reveal">
+          <div class="sp-tier-name" style="color:#CD7F32">Bronze</div>
+          <div class="sp-tier-price">$500<span>+</span></div>
+          <hr class="sp-tier-divider" />
+          <ul class="sp-tier-perks">
+            <li><span class="ck">✓</span> Tax-deductible contribution</li>
+            <li><span class="ck">✓</span> Logo on website</li>
+            <li><span class="ck">✓</span> Social media shoutout</li>
+            <li><span class="na">—</span> Logo on hardware</li>
+            <li><span class="na">—</span> Resume book access</li>
+            <li><span class="na">—</span> Networking events</li>
+          </ul>
+        </div>
+        <!-- Silver -->
+        <div class="sp-tier-card reveal" style="--delay:0.05s">
+          <div class="sp-tier-name" style="color:#C0C0C0">Silver</div>
+          <div class="sp-tier-price">$1,000<span>+</span></div>
+          <hr class="sp-tier-divider" />
+          <ul class="sp-tier-perks">
+            <li><span class="ck">✓</span> Tax-deductible contribution</li>
+            <li><span class="ck">✓</span> Logo on website</li>
+            <li><span class="ck">✓</span> Social media shoutout</li>
+            <li><span class="ck">✓</span> Logo on hardware (S)</li>
+            <li><span class="ck">✓</span> Resume book access</li>
+            <li><span class="na">—</span> Networking events</li>
+          </ul>
+        </div>
+        <!-- Gold -->
+        <div class="sp-tier-card reveal" style="--delay:0.1s">
+          <div class="sp-tier-name" style="color:#D4AF37">Gold</div>
+          <div class="sp-tier-price">$2,000<span>+</span></div>
+          <hr class="sp-tier-divider" />
+          <ul class="sp-tier-perks">
+            <li><span class="ck">✓</span> Tax-deductible contribution</li>
+            <li><span class="ck">✓</span> Logo on website</li>
+            <li><span class="ck">✓</span> Social media shoutout</li>
+            <li><span class="ck">✓</span> Logo on hardware (M)</li>
+            <li><span class="ck">✓</span> Resume book access</li>
+            <li><span class="ck">✓</span> Networking events</li>
+          </ul>
+        </div>
+        <!-- Platinum -->
+        <div class="sp-tier-card reveal" style="--delay:0.15s">
+          <div class="sp-tier-name" style="color:#b5c5d4">Platinum</div>
+          <div class="sp-tier-price">$6,000<span>+</span></div>
+          <hr class="sp-tier-divider" />
+          <ul class="sp-tier-perks">
+            <li><span class="ck">✓</span> Tax-deductible contribution</li>
+            <li><span class="ck">✓</span> Logo on website</li>
+            <li><span class="ck">✓</span> Social media shoutout</li>
+            <li><span class="ck">✓</span> Logo on hardware (L)</li>
+            <li><span class="ck">✓</span> Resume book access</li>
+            <li><span class="ck">✓</span> Networking events</li>
+            <li><span class="ck">✓</span> On-site demonstrations</li>
+          </ul>
+        </div>
+        <!-- Partner -->
+        <div class="sp-tier-card featured reveal" style="--delay:0.2s">
+          <div class="sp-tier-featured-badge">Most Impactful</div>
+          <div class="sp-tier-name" style="color:var(--orange)">Partner</div>
+          <div class="sp-tier-price">$10,000<span>+</span></div>
+          <hr class="sp-tier-divider" />
+          <ul class="sp-tier-perks">
+            <li><span class="ck">✓</span> Tax-deductible contribution</li>
+            <li><span class="ck">✓</span> Logo on website</li>
+            <li><span class="ck">✓</span> Social media shoutout</li>
+            <li><span class="ck">✓</span> Logo on hardware (L)</li>
+            <li><span class="ck">✓</span> Resume book access</li>
+            <li><span class="ck">✓</span> Networking events</li>
+            <li><span class="ck">✓</span> On-site demonstrations</li>
+            <li><span class="ck">✓</span> Named partner status</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contribution types -->
+      <div class="sp-contrib-row reveal">
+        <div class="sp-contrib-card">
           <div class="sp-contrib-icon">💵</div>
-          <div class="sp-contrib-title">Monetary Contributions</div>
-          <div class="sp-contrib-desc">Direct funding allows our members to compete, source materials, and keep our engineering programs running at full capacity. As a 501(c)(3), all donations are tax-deductible.</div>
+          <div class="sp-contrib-title">Monetary</div>
+          <div class="sp-contrib-desc">Direct funding enables competition, sourcing, and manufacturing. All donations are 501(c)(3) tax-deductible.</div>
         </div>
-        <div class="sp-contrib-card reveal" style="--delay:0.1s">
+        <div class="sp-contrib-card">
           <div class="sp-contrib-icon">🔧</div>
-          <div class="sp-contrib-title">In-Kind Contributions</div>
-          <div class="sp-contrib-desc">Hardware, tools, software licenses, and materials are gladly accepted. Sponsorship value is determined by the fair market value of the items donated.</div>
+          <div class="sp-contrib-title">In-Kind</div>
+          <div class="sp-contrib-desc">Hardware, tools, materials, and software licenses. Sponsorship value determined by fair market value.</div>
         </div>
-        <div class="sp-contrib-card reveal" style="--delay:0.2s">
+        <div class="sp-contrib-card">
           <div class="sp-contrib-icon">⚙️</div>
           <div class="sp-contrib-title">Design Reviews</div>
-          <div class="sp-contrib-desc">Experienced engineers can provide technical guidance and design review assistance as in-kind sponsorship. The value of these engagements is negotiable.</div>
+          <div class="sp-contrib-desc">Technical guidance from experienced engineers accepted as in-kind sponsorship. Value is negotiable.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================ FORM -->
-  <section class="sp-form-section">
+  <!-- ═══════════════════════════════════════════════ FORM -->
+  <section class="sp-form-section" id="inquiry">
     <div class="container">
-      <div class="sp-form-wrap">
-        <div class="sp-form-header reveal">
-          <div class="section-label">GET IN TOUCH</div>
-          <h2>Become a Sponsor</h2>
-          <p>Fill out the form below and our sponsorship lead will follow up within 48 hours.</p>
+      <div class="sp-form-inner">
+        <div class="sp-form-left reveal">
+          <div class="section-label">Get In Touch</div>
+          <h2>Let's Build Something Together.</h2>
+          <p>Fill out the form and our sponsorship lead will follow up within 48 hours. We're happy to discuss custom partnership structures, in-kind contributions, or anything else that works for your organization.</p>
+          <div class="sp-form-contact-item">
+            <div class="sp-form-contact-icon">✉</div>
+            <a href="mailto:boringillini@gmail.com">boringillini@gmail.com</a>
+          </div>
+          <div class="sp-form-contact-item">
+            <div class="sp-form-contact-icon">📍</div>
+            <span>Grainger College of Engineering<br />University of Illinois Urbana-Champaign</span>
+          </div>
+          <!-- Current sponsors -->
+          <div style="margin-top:40px">
+            <div style="font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px">Current Partners</div>
+            <div style="display:flex;flex-wrap:wrap;gap:10px">
+              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">MechSE · UIUC</span>
+              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">Sumitomo</span>
+              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">Chicago Metal</span>
+              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">Caterpillar</span>
+              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">Cadence</span>
+              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">+more</span>
+            </div>
+          </div>
         </div>
-        <div class="sp-form reveal">
+
+        <div class="sp-form-right reveal" style="--delay:0.1s">
           <form id="sponsorForm">
-            <div class="sp-form-grid">
+            <div class="sp-form-row">
               <div class="sp-form-group">
                 <label>Full Name <span class="req">*</span></label>
-                <input type="text" id="f-name" placeholder="Enter your full name..." required />
+                <input type="text" id="f-name" placeholder="Your name" required />
               </div>
               <div class="sp-form-group">
-                <label>Intended Sponsor Level <span class="req">*</span></label>
-                <select id="f-tier" required>
-                  <option value="" disabled selected>Select a sponsor level...</option>
-                  <option value="Bronze ($500+)">Bronze — $500+</option>
-                  <option value="Silver ($1,000+)">Silver — $1,000+</option>
-                  <option value="Gold ($2,000+)">Gold — $2,000+</option>
-                  <option value="Platinum ($6,000+)">Platinum — $6,000+</option>
-                  <option value="Partner ($10,000+)">Partner — $10,000+</option>
-                  <option value="In-Kind / Other">In-Kind / Other</option>
-                </select>
-              </div>
-              <div class="sp-form-group">
-                <label>Company / Organization <span class="req">*</span></label>
-                <input type="text" id="f-company" placeholder="Enter your company / organization..." required />
-              </div>
-              <div class="sp-form-group">
-                <label>Contact Email <span class="req">*</span></label>
-                <input type="email" id="f-email" placeholder="Enter your contact email..." required />
-              </div>
-              <div class="sp-form-group full">
-                <label>Message</label>
-                <textarea id="f-message" placeholder="Tell us about your goals, questions, or anything else..."></textarea>
+                <label>Company <span class="req">*</span></label>
+                <input type="text" id="f-company" placeholder="Your company" required />
               </div>
             </div>
-            <button type="submit" class="btn btn-primary sp-form-submit">Submit Inquiry</button>
+            <div class="sp-form-group">
+              <label>Contact Email <span class="req">*</span></label>
+              <input type="email" id="f-email" placeholder="your@company.com" required />
+            </div>
+            <div class="sp-form-group">
+              <label>Intended Tier <span class="req">*</span></label>
+              <select id="f-tier" required>
+                <option value="" disabled selected>Select a tier...</option>
+                <option value="Bronze ($500+)">Bronze — $500+</option>
+                <option value="Silver ($1,000+)">Silver — $1,000+</option>
+                <option value="Gold ($2,000+)">Gold — $2,000+</option>
+                <option value="Platinum ($6,000+)">Platinum — $6,000+</option>
+                <option value="Partner ($10,000+)">Partner — $10,000+</option>
+                <option value="In-Kind / Other">In-Kind / Other</option>
+              </select>
+            </div>
+            <div class="sp-form-group">
+              <label>Message</label>
+              <textarea id="f-message" placeholder="Questions, goals, or anything you'd like us to know..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary sp-form-submit">Send Inquiry →</button>
           </form>
-          <p class="sp-form-note">Or email us directly at <a href="mailto:boringillini@gmail.com">boringillini@gmail.com</a></p>
+          <p class="sp-form-note">We respond within 48 hours. All sponsorships are <a href="#">tax-deductible</a>.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================ FOOTER -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="assets/logos/BoringIlliniLogoWhite.png" alt="The Boring Illini" class="nav-logo-img" style="height:48px" />
+            <img src="assets/logos/BoringIlliniLogoWhite.png" alt="The Boring Illini" class="nav-logo-img" style="height:40px" />
           </div>
           <p>University of Illinois Urbana-Champaign<br />Grainger College of Engineering</p>
         </div>
@@ -615,7 +998,6 @@
           <div class="footer-col">
             <div class="footer-col-title">Contact</div>
             <a href="mailto:boringillini@gmail.com">boringillini@gmail.com</a>
-            <a href="mailto:boringillini@gmail.com">Sponsorship: Tom Hong</a>
           </div>
         </div>
       </div>
@@ -626,13 +1008,11 @@
   </footer>
 
   <script>
-    /* Navbar scroll */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
 
-    /* Mobile menu */
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
@@ -643,26 +1023,11 @@
       hamburger.querySelector('span:nth-child(3)').style.transform = open ? '' : 'translateY(-7px) rotate(-45deg)';
     });
 
-    /* Reveal observer */
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    /* Benefit tabs */
-    const tabs = document.querySelectorAll('.sp-tab');
-    const panels = document.querySelectorAll('.sp-panel');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const idx = tab.dataset.panel;
-        tabs.forEach(t => t.classList.remove('active'));
-        panels.forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById('panel-' + idx).classList.add('active');
-      });
-    });
-
-    /* Form submit — mailto */
     document.getElementById('sponsorForm').addEventListener('submit', (e) => {
       e.preventDefault();
       const name    = document.getElementById('f-name').value;
@@ -670,9 +1035,7 @@
       const email   = document.getElementById('f-email').value;
       const tier    = document.getElementById('f-tier').value;
       const message = document.getElementById('f-message').value;
-      const body = encodeURIComponent(
-        `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nTier: ${tier}\n\nMessage:\n${message}`
-      );
+      const body = encodeURIComponent(`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nTier: ${tier}\n\nMessage:\n${message}`);
       window.location.href = `mailto:boringillini@gmail.com?subject=Sponsorship Inquiry — ${company}&body=${body}`;
     });
   </script>
