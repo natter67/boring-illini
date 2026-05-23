@@ -597,6 +597,24 @@
     }
     .sp-form-note a { color: var(--orange); }
 
+    /* ── Partner logo wall ──────────────────────────────────── */
+    .sp-partner-logo {
+      background: #fff;
+      border-radius: 6px;
+      padding: 10px 18px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .sp-partner-logo:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+    .sp-partner-logo img { height: 28px; width: auto; max-width: 110px; object-fit: contain; display: block; }
+    .sp-partner-logo--sm { height: 48px; padding: 8px 14px; }
+    .sp-partner-logo--sm img { height: 22px; max-width: 90px; }
+    .sp-partner-logo--xs { height: 40px; padding: 6px 12px; }
+    .sp-partner-logo--xs img { height: 18px; max-width: 80px; }
+
     /* ── Responsive ─────────────────────────────────────────── */
     @media (max-width: 1024px) {
       .sp-tier-cards { grid-template-columns: repeat(3, 1fr); }
@@ -746,126 +764,57 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════ BENEFITS -->
-  <section class="sp-benefits">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">What You Get</div>
-        <h2 class="section-title">Built to Deliver ROI.</h2>
-      </div>
-      <div class="sp-benefits-grid">
-        <div class="sp-benefit-card reveal">
-          <div class="sp-benefit-icon">◎</div>
-          <div class="sp-benefit-title">Brand at Competition</div>
-          <div class="sp-benefit-desc">Your logo on the machine, team apparel, and pit setup — seen by judges, media, and competing teams from top universities worldwide at the Not a Boring Competition.</div>
-          <div class="sp-benefit-tier">Silver tier & above</div>
-        </div>
-        <div class="sp-benefit-card reveal" style="--delay:0.1s">
-          <div class="sp-benefit-icon">◈</div>
-          <div class="sp-benefit-title">Recruiting Pipeline</div>
-          <div class="sp-benefit-desc">Direct access to our team's resume book — 23 high-caliber students from UIUC Grainger College of Engineering, one of the top engineering schools in the country.</div>
-          <div class="sp-benefit-tier">Silver tier & above</div>
-        </div>
-        <div class="sp-benefit-card reveal" style="--delay:0.2s">
-          <div class="sp-benefit-icon">⚡</div>
-          <div class="sp-benefit-title">Digital Reach</div>
-          <div class="sp-benefit-desc">Logo on our website, social media shoutout across Instagram, LinkedIn, and X — the same channels that reached 1.1M views when Elon Musk reposted our ROTY win.</div>
-          <div class="sp-benefit-tier">All tiers</div>
-        </div>
-        <div class="sp-benefit-card reveal" style="--delay:0.1s">
-          <div class="sp-benefit-icon">◉</div>
-          <div class="sp-benefit-title">Networking Events</div>
-          <div class="sp-benefit-desc">Host a company presentation, lab tour, or info session directly with our team. Connect your engineers with the next generation of talent before they hit the job market.</div>
-          <div class="sp-benefit-tier">Gold tier & above</div>
-        </div>
-        <div class="sp-benefit-card reveal" style="--delay:0.2s">
-          <div class="sp-benefit-icon">▣</div>
-          <div class="sp-benefit-title">On-Site Access</div>
-          <div class="sp-benefit-desc">Attend our machine demonstrations, watch full-scale testing, and see your sponsored engineering in action — up close, before competition day.</div>
-          <div class="sp-benefit-tier">Platinum tier & above</div>
-        </div>
-        <div class="sp-benefit-card reveal" style="--delay:0.3s">
-          <div class="sp-benefit-icon">★</div>
-          <div class="sp-benefit-title">Tax Deductible</div>
-          <div class="sp-benefit-desc">As a registered 501(c)(3) nonprofit, all monetary contributions to the Boring Illini qualify as tax-deductible charitable donations under US law.</div>
-          <div class="sp-benefit-tier">All tiers</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════ SOCIAL PROOF -->
-  <section class="sp-social-proof">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Recognition</div>
-        <h2 class="section-title">The World is Watching.</h2>
-      </div>
-      <div class="sp-proof-cards">
-        <div class="sp-proof-card reveal">
-          <img class="sp-proof-card-img" src="assets/logos/Mining-picture.jpeg" alt="Team in the field" />
-          <div class="sp-proof-card-body">
-            <div class="sp-proof-card-tag">Not a Boring Competition — 2026</div>
-            <div class="sp-proof-card-title">Rookie of the Year</div>
-            <div class="sp-proof-card-desc">Awarded to the top first-year team out of all global university competitors — in our very first season. The Boring Illini went from founding to champion in under 12 months.</div>
-          </div>
-        </div>
-        <div class="sp-proof-card reveal" style="--delay:0.1s">
-          <img class="sp-proof-card-img" src="assets/logos/B-real1.JPG" alt="Boring Illini at competition" />
-          <div class="sp-proof-card-body">
-            <div class="sp-proof-card-tag">Elon Musk — @elonmusk</div>
-            <div class="sp-proof-card-title">1.1 Million Views</div>
-            <div class="sp-proof-card-desc">Elon Musk reposted our Rookie of the Year win to his 200M+ followers. The post reached 1.1 million views — putting the Boring Illini, our machine, and our sponsors in front of the world.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══════════════════════════════════════════════ CURRENT PARTNERS -->
-  <section class="section sponsors" style="background:var(--bg);padding:80px 0">
+  <section style="background:var(--bg-1);padding:72px 0;border-top:1px solid var(--border)">
     <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Current Partners</div>
-        <h2 class="section-title">Backed by the Best</h2>
-        <p class="section-subtitle">Companies that already believe in what we're building.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px">
+        <div>
+          <div class="section-label">Current Partners</div>
+          <div style="font-family:var(--font-display);font-size:clamp(28px,3vw,40px);color:var(--text);line-height:1;margin-top:6px">Companies Already In.</div>
+        </div>
+        <a href="#inquiry" class="btn btn-primary">Join Them →</a>
       </div>
-      <div class="sponsor-tiers">
-        <div class="tier-section reveal">
-          <div class="tier-label tier-gold">Platinum · $6,000+</div>
-          <div class="sponsor-row">
-            <div class="sponsor-logo-box large"><img src="assets/logos/uiuc-mechse.png" alt="University of Illinois — Grainger College of Engineering" /></div>
-            <div class="sponsor-logo-box large"><img src="assets/logos/chicago-metal1.png" alt="Chicago Metal Rolled Products" /></div>
-            <div class="sponsor-logo-box large"><img src="assets/logos/sumitomo.png" alt="Sumitomo Drive Technologies" /></div>
-            <div class="sponsor-logo-box large"><img src="assets/logos/illinois-green-fund.png" alt="Illinois Green Fund" /></div>
-          </div>
+      <!-- Platinum row -->
+      <div style="margin-bottom:8px">
+        <div style="font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FFD700;margin-bottom:12px;opacity:0.8">Platinum</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <div class="sp-partner-logo"><img src="assets/logos/uiuc-mechse.png" alt="MechSE UIUC" /></div>
+          <div class="sp-partner-logo"><img src="assets/logos/chicago-metal1.png" alt="Chicago Metal" /></div>
+          <div class="sp-partner-logo"><img src="assets/logos/sumitomo.png" alt="Sumitomo" /></div>
+          <div class="sp-partner-logo"><img src="assets/logos/illinois-green-fund.png" alt="Illinois Green Fund" /></div>
         </div>
-        <div class="tier-section reveal">
-          <div class="tier-label tier-silver">Gold · $2,000+</div>
-          <div class="sponsor-row">
-            <div class="sponsor-logo-box medium"><img src="assets/logos/cadence.png" alt="Cadence" /></div>
-            <div class="sponsor-logo-box medium"><img src="assets/logos/edc.png" alt="Engineering Design Council" /></div>
-          </div>
+      </div>
+      <div style="border-top:1px solid var(--border);margin:20px 0"></div>
+      <!-- Gold row -->
+      <div style="margin-bottom:8px">
+        <div style="font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#D4AF37;margin-bottom:12px;opacity:0.8">Gold</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/cadence.png" alt="Cadence" /></div>
+          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/edc.png" alt="EDC" /></div>
         </div>
-        <div class="tier-section reveal">
-          <div class="tier-label tier-silver">Silver · $1,000+</div>
-          <div class="sponsor-row">
-            <div class="sponsor-logo-box medium"><img src="assets/logos/bonnell.svg" alt="Bonnell Aluminum" /></div>
-            <div class="sponsor-logo-box medium"><img src="assets/logos/akkerman.svg" alt="Akkerman" /></div>
-            <div class="sponsor-logo-box medium"><img src="assets/logos/nova-advisors.jpg" alt="Nova Advisors" /></div>
-          </div>
+      </div>
+      <div style="border-top:1px solid var(--border);margin:20px 0"></div>
+      <!-- Silver row -->
+      <div style="margin-bottom:8px">
+        <div style="font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C0C0C0;margin-bottom:12px;opacity:0.8">Silver</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/bonnell.svg" alt="Bonnell" /></div>
+          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/akkerman.svg" alt="Akkerman" /></div>
+          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/nova-advisors.jpg" alt="Nova Advisors" /></div>
         </div>
-        <div class="tier-section reveal">
-          <div class="tier-label tier-bronze">Bronze · $500+</div>
-          <div class="sponsor-row" style="flex-wrap:wrap">
-            <div class="sponsor-logo-box small"><img src="assets/logos/ec.jpg" alt="Engineering Council @ Illinois" /></div>
-            <div class="sponsor-logo-box small"><img src="assets/logos/sormaz.jpeg" alt="Sons of Sormas" /></div>
-            <div class="sponsor-logo-box small"><img src="assets/logos/illini-dads.png" alt="Illini Dads Association" /></div>
-            <div class="sponsor-logo-box small"><img src="assets/logos/fastenal.png" alt="Fastenal" /></div>
-            <div class="sponsor-logo-box small"><img src="assets/logos/grainger.png" alt="Grainger" /></div>
-            <div class="sponsor-logo-box small"><img src="assets/logos/cat.png" alt="Caterpillar" /></div>
-            <div class="sponsor-logo-box small"><img src="assets/logos/sendcutsend.svg" alt="SendCutSend" /></div>
-          </div>
+      </div>
+      <div style="border-top:1px solid var(--border);margin:20px 0"></div>
+      <!-- Bronze row -->
+      <div>
+        <div style="font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#CD7F32;margin-bottom:12px;opacity:0.8">Bronze</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/ec.jpg" alt="EC" /></div>
+          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/sormaz.jpeg" alt="Sormaz" /></div>
+          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/illini-dads.png" alt="Illini Dads" /></div>
+          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/fastenal.png" alt="Fastenal" /></div>
+          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/grainger.png" alt="Grainger" /></div>
+          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/cat.png" alt="Caterpillar" /></div>
+          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/sendcutsend.svg" alt="SendCutSend" /></div>
         </div>
       </div>
     </div>
