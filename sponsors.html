@@ -195,18 +195,16 @@
       line-height: 1.7;
     }
     .sp-talent-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
       margin-bottom: 56px;
     }
     .sp-tl-wrap {
       background: #fff;
       border-radius: 8px;
-      padding: 12px 22px;
-      height: 60px;
+      padding: 14px 20px;
+      height: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -215,9 +213,9 @@
     .sp-tl-wrap:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
     .sp-tl-wrap img {
       display: block;
-      height: 28px;
+      height: 42px;
       width: auto;
-      max-width: 120px;
+      max-width: 140px;
       object-fit: contain;
       mix-blend-mode: multiply;
     }
@@ -605,20 +603,32 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 36px 52px;
+      gap: 16px;
       padding: 8px 0;
     }
-    .sp-collage img {
+    .sp-collage-item {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      transition: border-color 0.18s, box-shadow 0.18s;
+    }
+    .sp-collage-item:hover { border-color: var(--border-hi); box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
+    .sp-collage-item img {
       display: block;
       object-fit: contain;
-      transition: opacity 0.2s;
     }
-    .sp-collage img.logo-invert { filter: invert(1); }
-    .sp-collage img:hover { opacity: 1 !important; }
-    .sp-collage img.tier-platinum { height: 52px; max-width: 180px; opacity: 0.85; }
-    .sp-collage img.tier-gold     { height: 34px; max-width: 130px; opacity: 0.70; }
-    .sp-collage img.tier-silver   { height: 24px; max-width: 100px; opacity: 0.55; }
-    .sp-collage img.tier-bronze   { height: 16px; max-width: 80px;  opacity: 0.38; }
+    .sp-collage-item.tier-platinum { min-height: 80px; }
+    .sp-collage-item.tier-platinum img { height: 48px; max-width: 160px; }
+    .sp-collage-item.tier-gold     { min-height: 68px; }
+    .sp-collage-item.tier-gold img { height: 36px; max-width: 140px; }
+    .sp-collage-item.tier-silver   { min-height: 58px; }
+    .sp-collage-item.tier-silver img { height: 28px; max-width: 120px; }
+    .sp-collage-item.tier-bronze   { min-height: 50px; }
+    .sp-collage-item.tier-bronze img { height: 22px; max-width: 100px; }
 
     /* ── Responsive ─────────────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -751,7 +761,7 @@
       </div>
       <p class="sp-talent-sub reveal">Our members have interned and worked at some of the most prestigious engineering companies in the world. Silver sponsors and above gain direct access to our resume book.</p>
       <div class="sp-talent-logos reveal">
-        <div class="sp-tl-wrap"><img src="assets/logos/Tesla_logo.png" alt="Tesla" class="logo-invert" /></div>
+        <div class="sp-tl-wrap"><img src="assets/logos/Tesla_logo.png" alt="Tesla" style="mix-blend-mode:normal;" /></div>
         <div class="sp-tl-wrap"><img src="assets/logos/spacex-logo-black-png-2460x800-11735762205bwsgpqgdcn.webp" alt="SpaceX" class="logo-invert" /></div>
         <div class="sp-tl-wrap"><img src="assets/logos/AMD-Logo.jpg" alt="AMD" /></div>
         <div class="sp-tl-wrap"><img src="assets/logos/rocketlab.png" alt="Rocket Lab" /></div>
@@ -784,25 +794,25 @@
       </div>
       <div class="sp-collage reveal">
         <!-- Platinum — largest -->
-        <img class="tier-platinum" src="assets/logos/uiuc-mechse.png" alt="MechSE UIUC" />
-        <img class="tier-platinum" src="assets/logos/chicago-metal1.png" alt="Chicago Metal" />
-        <img class="tier-platinum" src="assets/logos/sumitomo.png" alt="Sumitomo" />
-        <img class="tier-platinum" src="assets/logos/illinois-green-fund.png" alt="Illinois Green Fund" />
+        <div class="sp-collage-item tier-platinum"><img src="assets/logos/uiuc-mechse.png" alt="MechSE UIUC" /></div>
+        <div class="sp-collage-item tier-platinum"><img src="assets/logos/chicago-metal1.png" alt="Chicago Metal" /></div>
+        <div class="sp-collage-item tier-platinum"><img src="assets/logos/sumitomo.png" alt="Sumitomo" /></div>
+        <div class="sp-collage-item tier-platinum"><img src="assets/logos/illinois-green-fund.png" alt="Illinois Green Fund" /></div>
         <!-- Gold -->
-        <img class="tier-gold" src="assets/logos/cadence.png" alt="Cadence" />
-        <img class="tier-gold" src="assets/logos/edc.png" alt="EDC" />
+        <div class="sp-collage-item tier-gold"><img src="assets/logos/cadence.png" alt="Cadence" /></div>
+        <div class="sp-collage-item tier-gold"><img src="assets/logos/edc.png" alt="EDC" /></div>
         <!-- Silver -->
-        <img class="tier-silver" src="assets/logos/bonnell.svg" alt="Bonnell" />
-        <img class="tier-silver" src="assets/logos/akkerman.svg" alt="Akkerman" />
-        <img class="tier-silver" src="assets/logos/nova-advisors.jpg" alt="Nova Advisors" />
+        <div class="sp-collage-item tier-silver"><img src="assets/logos/bonnell.svg" alt="Bonnell" /></div>
+        <div class="sp-collage-item tier-silver"><img src="assets/logos/akkerman.svg" alt="Akkerman" /></div>
+        <div class="sp-collage-item tier-silver"><img src="assets/logos/nova-advisors.jpg" alt="Nova Advisors" /></div>
         <!-- Bronze — smallest -->
-        <img class="tier-bronze" src="assets/logos/ec.jpg" alt="EC" />
-        <img class="tier-bronze" src="assets/logos/sormaz.jpeg" alt="Sormaz" />
-        <img class="tier-bronze" src="assets/logos/illini-dads.png" alt="Illini Dads" />
-        <img class="tier-bronze" src="assets/logos/fastenal.png" alt="Fastenal" />
-        <img class="tier-bronze" src="assets/logos/grainger.png" alt="Grainger" />
-        <img class="tier-bronze" src="assets/logos/cat.png" alt="Caterpillar" />
-        <img class="tier-bronze" src="assets/logos/sendcutsend.svg" alt="SendCutSend" />
+        <div class="sp-collage-item tier-bronze"><img src="assets/logos/ec.jpg" alt="EC" /></div>
+        <div class="sp-collage-item tier-bronze"><img src="assets/logos/sormaz.jpeg" alt="Sormaz" /></div>
+        <div class="sp-collage-item tier-bronze"><img src="assets/logos/illini-dads.png" alt="Illini Dads" /></div>
+        <div class="sp-collage-item tier-bronze"><img src="assets/logos/fastenal.png" alt="Fastenal" /></div>
+        <div class="sp-collage-item tier-bronze"><img src="assets/logos/grainger.png" alt="Grainger" /></div>
+        <div class="sp-collage-item tier-bronze"><img src="assets/logos/cat.png" alt="Caterpillar" /></div>
+        <div class="sp-collage-item tier-bronze"><img src="assets/logos/sendcutsend.svg" alt="SendCutSend" /></div>
       </div>
     </div>
   </section>
