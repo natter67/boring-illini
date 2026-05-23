@@ -198,22 +198,27 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
+      gap: 16px;
       margin-bottom: 56px;
     }
-    .sp-talent-logo-pill {
-      background: var(--bg-3);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 10px 20px;
-      font-family: var(--font-head);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: var(--text);
-      transition: border-color 0.2s, color 0.2s;
+    .sp-talent-logo-box {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 14px 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .sp-talent-logo-pill:hover { border-color: var(--orange); color: var(--orange); }
+    .sp-talent-logo-box:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+    .sp-talent-logo-box img {
+      height: 28px;
+      width: auto;
+      max-width: 120px;
+      object-fit: contain;
+      display: block;
+    }
     .sp-talent-cta {
       text-align: center;
       padding: 40px;
@@ -705,15 +710,15 @@
       </div>
       <p class="sp-talent-sub reveal">Our members have interned and worked at some of the most prestigious engineering companies in the world. Silver sponsors and above gain direct access to our resume book.</p>
       <div class="sp-talent-logos reveal">
-        <div class="sp-talent-logo-pill">Tesla</div>
-        <div class="sp-talent-logo-pill">AMD</div>
-        <div class="sp-talent-logo-pill">Rocket Lab</div>
-        <div class="sp-talent-logo-pill">Kohler</div>
-        <div class="sp-talent-logo-pill">Zebra Technologies</div>
-        <div class="sp-talent-logo-pill">Renesas</div>
-        <div class="sp-talent-logo-pill">P&G</div>
-        <div class="sp-talent-logo-pill">Tenneco</div>
-        <div class="sp-talent-logo-pill">Sormaz</div>
+        <div class="sp-talent-logo-box"><img src="https://logo.clearbit.com/tesla.com" alt="Tesla" /></div>
+        <div class="sp-talent-logo-box"><img src="https://logo.clearbit.com/amd.com" alt="AMD" /></div>
+        <div class="sp-talent-logo-box"><img src="https://logo.clearbit.com/rocketlabusa.com" alt="Rocket Lab" /></div>
+        <div class="sp-talent-logo-box"><img src="https://logo.clearbit.com/kohler.com" alt="Kohler" /></div>
+        <div class="sp-talent-logo-box"><img src="https://logo.clearbit.com/zebra.com" alt="Zebra Technologies" /></div>
+        <div class="sp-talent-logo-box"><img src="https://logo.clearbit.com/renesas.com" alt="Renesas" /></div>
+        <div class="sp-talent-logo-box"><img src="https://logo.clearbit.com/pg.com" alt="P&G" /></div>
+        <div class="sp-talent-logo-box"><img src="https://logo.clearbit.com/tenneco.com" alt="Tenneco" /></div>
+        <div class="sp-talent-logo-box"><img src="assets/logos/sormaz.jpeg" alt="Sormaz" style="border-radius:4px" /></div>
       </div>
       <div class="sp-talent-cta reveal">
         <h3>Access Our Talent.</h3>
@@ -970,18 +975,6 @@
           <div class="sp-form-contact-item">
             <div class="sp-form-contact-icon">📍</div>
             <span>Grainger College of Engineering<br />University of Illinois Urbana-Champaign</span>
-          </div>
-          <!-- Current sponsors -->
-          <div style="margin-top:40px">
-            <div style="font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px">Current Partners</div>
-            <div style="display:flex;flex-wrap:wrap;gap:10px">
-              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">MechSE · UIUC</span>
-              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">Sumitomo</span>
-              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">Chicago Metal</span>
-              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">Caterpillar</span>
-              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">Cadence</span>
-              <span style="font-size:13px;color:var(--text-muted);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:6px 12px">+more</span>
-            </div>
           </div>
         </div>
 
