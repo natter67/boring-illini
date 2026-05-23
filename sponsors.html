@@ -598,22 +598,25 @@
     .sp-form-note a { color: var(--orange); }
 
     /* ── Partner logo wall ──────────────────────────────────── */
-    .sp-partner-logo {
-      background: #fff;
-      border-radius: 6px;
-      padding: 10px 18px;
-      height: 56px;
+    .sp-collage {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: center;
-      transition: transform 0.15s, box-shadow 0.15s;
+      gap: 40px 56px;
+      padding: 8px 0;
     }
-    .sp-partner-logo:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
-    .sp-partner-logo img { height: 28px; width: auto; max-width: 110px; object-fit: contain; display: block; }
-    .sp-partner-logo--sm { height: 48px; padding: 8px 14px; }
-    .sp-partner-logo--sm img { height: 22px; max-width: 90px; }
-    .sp-partner-logo--xs { height: 40px; padding: 6px 12px; }
-    .sp-partner-logo--xs img { height: 18px; max-width: 80px; }
+    .sp-collage img {
+      display: block;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+    .sp-collage img:hover { opacity: 1; }
+    .sp-collage img.tier-platinum { height: 44px; max-width: 160px; }
+    .sp-collage img.tier-gold     { height: 30px; max-width: 120px; }
+    .sp-collage img.tier-silver   { height: 24px; max-width: 100px; }
+    .sp-collage img.tier-bronze   { height: 18px; max-width: 80px; opacity: 0.38; }
 
     /* ── Responsive ─────────────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -767,55 +770,34 @@
   <!-- ═══════════════════════════════════════════════ CURRENT PARTNERS -->
   <section style="background:var(--bg-1);padding:72px 0;border-top:1px solid var(--border)">
     <div class="container">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:16px">
         <div>
           <div class="section-label">Current Partners</div>
           <div style="font-family:var(--font-display);font-size:clamp(28px,3vw,40px);color:var(--text);line-height:1;margin-top:6px">Companies Already In.</div>
         </div>
         <a href="#inquiry" class="btn btn-primary">Join Them →</a>
       </div>
-      <!-- Platinum row -->
-      <div style="margin-bottom:8px">
-        <div style="font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FFD700;margin-bottom:12px;opacity:0.8">Platinum</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <div class="sp-partner-logo"><img src="assets/logos/uiuc-mechse.png" alt="MechSE UIUC" /></div>
-          <div class="sp-partner-logo"><img src="assets/logos/chicago-metal1.png" alt="Chicago Metal" /></div>
-          <div class="sp-partner-logo"><img src="assets/logos/sumitomo.png" alt="Sumitomo" /></div>
-          <div class="sp-partner-logo"><img src="assets/logos/illinois-green-fund.png" alt="Illinois Green Fund" /></div>
-        </div>
-      </div>
-      <div style="border-top:1px solid var(--border);margin:20px 0"></div>
-      <!-- Gold row -->
-      <div style="margin-bottom:8px">
-        <div style="font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#D4AF37;margin-bottom:12px;opacity:0.8">Gold</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/cadence.png" alt="Cadence" /></div>
-          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/edc.png" alt="EDC" /></div>
-        </div>
-      </div>
-      <div style="border-top:1px solid var(--border);margin:20px 0"></div>
-      <!-- Silver row -->
-      <div style="margin-bottom:8px">
-        <div style="font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C0C0C0;margin-bottom:12px;opacity:0.8">Silver</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/bonnell.svg" alt="Bonnell" /></div>
-          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/akkerman.svg" alt="Akkerman" /></div>
-          <div class="sp-partner-logo sp-partner-logo--sm"><img src="assets/logos/nova-advisors.jpg" alt="Nova Advisors" /></div>
-        </div>
-      </div>
-      <div style="border-top:1px solid var(--border);margin:20px 0"></div>
-      <!-- Bronze row -->
-      <div>
-        <div style="font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#CD7F32;margin-bottom:12px;opacity:0.8">Bronze</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/ec.jpg" alt="EC" /></div>
-          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/sormaz.jpeg" alt="Sormaz" /></div>
-          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/illini-dads.png" alt="Illini Dads" /></div>
-          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/fastenal.png" alt="Fastenal" /></div>
-          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/grainger.png" alt="Grainger" /></div>
-          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/cat.png" alt="Caterpillar" /></div>
-          <div class="sp-partner-logo sp-partner-logo--xs"><img src="assets/logos/sendcutsend.svg" alt="SendCutSend" /></div>
-        </div>
+      <div class="sp-collage reveal">
+        <!-- Platinum — largest -->
+        <img class="tier-platinum" src="assets/logos/uiuc-mechse.png" alt="MechSE UIUC" />
+        <img class="tier-platinum" src="assets/logos/chicago-metal1.png" alt="Chicago Metal" />
+        <img class="tier-platinum" src="assets/logos/sumitomo.png" alt="Sumitomo" />
+        <img class="tier-platinum" src="assets/logos/illinois-green-fund.png" alt="Illinois Green Fund" />
+        <!-- Gold -->
+        <img class="tier-gold" src="assets/logos/cadence.png" alt="Cadence" />
+        <img class="tier-gold" src="assets/logos/edc.png" alt="EDC" />
+        <!-- Silver -->
+        <img class="tier-silver" src="assets/logos/bonnell.svg" alt="Bonnell" />
+        <img class="tier-silver" src="assets/logos/akkerman.svg" alt="Akkerman" />
+        <img class="tier-silver" src="assets/logos/nova-advisors.jpg" alt="Nova Advisors" />
+        <!-- Bronze — smallest -->
+        <img class="tier-bronze" src="assets/logos/ec.jpg" alt="EC" />
+        <img class="tier-bronze" src="assets/logos/sormaz.jpeg" alt="Sormaz" />
+        <img class="tier-bronze" src="assets/logos/illini-dads.png" alt="Illini Dads" />
+        <img class="tier-bronze" src="assets/logos/fastenal.png" alt="Fastenal" />
+        <img class="tier-bronze" src="assets/logos/grainger.png" alt="Grainger" />
+        <img class="tier-bronze" src="assets/logos/cat.png" alt="Caterpillar" />
+        <img class="tier-bronze" src="assets/logos/sendcutsend.svg" alt="SendCutSend" />
       </div>
     </div>
   </section>
