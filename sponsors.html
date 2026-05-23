@@ -438,20 +438,38 @@
     .sp-contrib-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 2px;
       margin-top: 48px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
     }
     .sp-contrib-card {
       background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      transition: border-color 0.2s;
+      padding: 36px 32px;
+      transition: background 0.2s;
+      position: relative;
     }
-    .sp-contrib-card:hover { border-color: var(--border-hi); }
-    .sp-contrib-icon { font-size: 24px; margin-bottom: 12px; }
-    .sp-contrib-title { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
-    .sp-contrib-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .sp-contrib-card:hover { background: var(--bg-3); }
+    .sp-contrib-number {
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: rgba(232,74,39,0.15);
+      line-height: 1;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    .sp-contrib-title {
+      font-family: var(--font-head);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .sp-contrib-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
     /* ── Form ───────────────────────────────────────────────── */
     .sp-form-section {
@@ -942,19 +960,19 @@
       <!-- Contribution types -->
       <div class="sp-contrib-row reveal">
         <div class="sp-contrib-card">
-          <div class="sp-contrib-icon">💵</div>
+          <div class="sp-contrib-number">01</div>
           <div class="sp-contrib-title">Monetary</div>
-          <div class="sp-contrib-desc">Direct funding enables competition, sourcing, and manufacturing. All donations are 501(c)(3) tax-deductible.</div>
+          <div class="sp-contrib-desc">Direct funding enables competition participation, material sourcing, and manufacturing. All contributions are 501(c)(3) tax-deductible.</div>
         </div>
         <div class="sp-contrib-card">
-          <div class="sp-contrib-icon">🔧</div>
+          <div class="sp-contrib-number">02</div>
           <div class="sp-contrib-title">In-Kind</div>
-          <div class="sp-contrib-desc">Hardware, tools, materials, and software licenses. Sponsorship value determined by fair market value.</div>
+          <div class="sp-contrib-desc">Hardware, tooling, raw materials, and software licenses are gladly accepted. Sponsorship value is determined by fair market value of the contribution.</div>
         </div>
         <div class="sp-contrib-card">
-          <div class="sp-contrib-icon">⚙️</div>
+          <div class="sp-contrib-number">03</div>
           <div class="sp-contrib-title">Design Reviews</div>
-          <div class="sp-contrib-desc">Technical guidance from experienced engineers accepted as in-kind sponsorship. Value is negotiable.</div>
+          <div class="sp-contrib-desc">Technical expertise and engineering guidance from industry professionals accepted as in-kind sponsorship. Terms are negotiable.</div>
         </div>
       </div>
     </div>
