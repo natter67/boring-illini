@@ -203,7 +203,7 @@
     .sp-tl-wrap {
       background: #fff;
       border-radius: 8px;
-      padding: 14px 20px;
+      padding: 8px 10px;
       height: 80px;
       display: flex;
       align-items: center;
@@ -213,9 +213,8 @@
     .sp-tl-wrap:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
     .sp-tl-wrap img {
       display: block;
-      height: 42px;
-      width: auto;
-      max-width: 140px;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
       mix-blend-mode: multiply;
     }
@@ -613,22 +612,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 20px;
+      padding: 8px 10px;
       transition: border-color 0.18s, box-shadow 0.18s;
     }
     .sp-collage-item:hover { border-color: var(--border-hi); box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
     .sp-collage-item img {
       display: block;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
     }
-    .sp-collage-item.tier-platinum { min-height: 100px; padding: 16px 28px; }
-    .sp-collage-item.tier-platinum img { height: 64px; max-width: 220px; }
-    .sp-collage-item.tier-gold     { min-height: 76px; padding: 12px 22px; }
-    .sp-collage-item.tier-gold img { height: 44px; max-width: 170px; }
-    .sp-collage-item.tier-silver   { min-height: 64px; padding: 10px 18px; }
-    .sp-collage-item.tier-silver img { height: 34px; max-width: 140px; }
-    .sp-collage-item.tier-bronze   { min-height: 52px; padding: 8px 14px; }
-    .sp-collage-item.tier-bronze img { height: 24px; max-width: 110px; }
+    .sp-collage-item.tier-platinum { height: 100px; }
+    .sp-collage-item.tier-gold     { height: 76px; }
+    .sp-collage-item.tier-silver   { height: 64px; }
+    .sp-collage-item.tier-bronze   { height: 52px; }
 
     /* ── Responsive ─────────────────────────────────────────── */
     @media (max-width: 1024px) {
