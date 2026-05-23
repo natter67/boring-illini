@@ -213,8 +213,8 @@
     .sp-tl-wrap:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
     .sp-tl-wrap img {
       display: block;
-      width: 100%;
-      height: 100%;
+      height: 56px;
+      width: auto;
       object-fit: contain;
       mix-blend-mode: multiply;
     }
@@ -618,14 +618,13 @@
     .sp-collage-item:hover { border-color: var(--border-hi); box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
     .sp-collage-item img {
       display: block;
-      width: 100%;
-      height: 100%;
+      width: auto;
       object-fit: contain;
     }
-    .sp-collage-item.tier-platinum { height: 100px; }
-    .sp-collage-item.tier-gold     { height: 76px; }
-    .sp-collage-item.tier-silver   { height: 64px; }
-    .sp-collage-item.tier-bronze   { height: 52px; }
+    .sp-collage-item.tier-platinum img { height: 68px; }
+    .sp-collage-item.tier-gold img     { height: 46px; }
+    .sp-collage-item.tier-silver img   { height: 34px; }
+    .sp-collage-item.tier-bronze img   { height: 24px; }
 
     /* ── Responsive ─────────────────────────────────────────── */
     @media (max-width: 1024px) {
