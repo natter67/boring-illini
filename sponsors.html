@@ -209,11 +209,11 @@
       width: auto;
       max-width: 120px;
       object-fit: contain;
-      filter: grayscale(1) invert(1);
-      opacity: 0.6;
+      opacity: 0.85;
       transition: opacity 0.2s;
     }
     .sp-talent-logos img:hover { opacity: 1; }
+    .sp-talent-logos img.logo-invert { filter: invert(1); }
     .sp-talent-cta {
       text-align: center;
       padding: 40px;
@@ -603,9 +603,9 @@
     .sp-collage img {
       display: block;
       object-fit: contain;
-      filter: grayscale(1) invert(1);
       transition: opacity 0.2s;
     }
+    .sp-collage img.logo-invert { filter: invert(1); }
     .sp-collage img:hover { opacity: 1 !important; }
     .sp-collage img.tier-platinum { height: 52px; max-width: 180px; opacity: 0.85; }
     .sp-collage img.tier-gold     { height: 34px; max-width: 130px; opacity: 0.70; }
@@ -743,8 +743,8 @@
       </div>
       <p class="sp-talent-sub reveal">Our members have interned and worked at some of the most prestigious engineering companies in the world. Silver sponsors and above gain direct access to our resume book.</p>
       <div class="sp-talent-logos reveal">
-        <img src="assets/logos/Tesla_logo.png" alt="Tesla" />
-        <img src="assets/logos/spacex-logo-black-png-2460x800-11735762205bwsgpqgdcn.webp" alt="SpaceX" />
+        <img src="assets/logos/Tesla_logo.png" alt="Tesla" class="logo-invert" />
+        <img src="assets/logos/spacex-logo-black-png-2460x800-11735762205bwsgpqgdcn.webp" alt="SpaceX" class="logo-invert" />
         <img src="assets/logos/AMD-Logo.jpg" alt="AMD" />
         <img src="assets/logos/rocketlab.png" alt="Rocket Lab" />
         <img src="assets/logos/kohler.jpeg" alt="Kohler" />
