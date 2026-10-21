@@ -1,3 +1,8 @@
 .DS_Store
 Thumbs.db
 *.log
+
+# Engineering work, not part of the website
+engineering images/
+fusion_scripts/
+muck_matlab/
